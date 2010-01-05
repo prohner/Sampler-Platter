@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @grocery_list.name %>
+</p>
+
+<!--%= sortable_element :grocery_list,
+							:url => {:action => "sort", :id => @grocery_list},
+							:complete => visual_effect(:highlight, "grocery_list")
+%-->
+
+<ul id="grocery_list" style="cursor: move">
+  <% @grocery_list.food_items.each do |f| %>
+    <li id="item_<%= f.id %>" class="draggable">
+      <%= f.name %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= sortable_element "animal_list", :url => { :action => "hello" } -%>
+<ul id="animal_list"> 
+        <li id="item_1">Dog</li> 
+        <li id="item_2">Pig</li> 
+        <li id="item_3">Robot</li> 
+</ul>
+
+<%= link_to 'Edit', edit_grocery_list_path(@grocery_list) %> |
+<%= link_to 'Back', grocery_lists_path %>
