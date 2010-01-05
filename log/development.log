@@ -500,3 +500,30 @@ Rendering template within layouts/grocery_lists
 Rendering grocery_lists/show
   [4;36;1mFoodItem Load (0.7ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
 Completed in 25ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-04 22:43:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 111ms (View: 52, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-04 22:43:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-04 22:45:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]

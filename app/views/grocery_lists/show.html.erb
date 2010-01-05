@@ -3,21 +3,21 @@
   <%=h @grocery_list.name %>
 </p>
 
-<!--%= sortable_element :grocery_list,
+<%= sortable_element "my_list",
 							:url => {:action => "sort", :id => @grocery_list},
-							:complete => visual_effect(:highlight, "grocery_list")
-%-->
+							:complete => visual_effect(:highlight, "my_list")
+%>
 
-<ul id="grocery_list" style="cursor: move">
+<ul id="my_list" style="cursor: move">
   <% @grocery_list.food_items.each do |f| %>
-    <li id="item_<%= f.id %>" class="draggable">
+    <li id="list_<%= f.id %>">
       <%= f.name %>
     </li>
   <% end %>
 </ul>
 
 
-<%= sortable_element "animal_list", :url => { :action => "hello" } -%>
+<%= sortable_element :animal_list, :url => { :action => "hello" } -%>
 <ul id="animal_list"> 
         <li id="item_1">Dog</li> 
         <li id="item_2">Pig</li> 
