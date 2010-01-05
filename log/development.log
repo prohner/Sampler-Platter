@@ -1,0 +1,42 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-04 21:42:27) [GET]
+
+ActionController::RoutingError (No route matches "/samples" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-04 21:42:32) [GET]
+
+ActionController::RoutingError (No route matches "/samples/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-04 21:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/sample/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-04 21:43:22) [GET]
+
+ActionController::RoutingError (No route matches "/samples" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-04 21:44:08) [GET]
+Rendering samples/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-04 21:45:12) [GET]
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/samples]
