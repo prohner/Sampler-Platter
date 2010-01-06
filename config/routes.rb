@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :blogs
+
   map.resources :grocery_lists
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -42,4 +44,9 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing the them or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  
+  
+  map.auto_complete ':controller/:action', 
+                    :requirements => { :action => /auto_complete_for_\S+/ }, 
+                    :conditions => { :method => :post }  
 end
