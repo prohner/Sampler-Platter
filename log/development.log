@@ -527,3 +527,620 @@ Rendering template within layouts/grocery_lists
 Rendering grocery_lists/show
   [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
 Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-05 15:50:31) [GET]
+Rendering samples/index
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-05 15:50:33) [GET]
+  [4;36;1mGroceryList Load (1.0ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 38ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:50:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:51:02) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (14.9ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 115ms (View: 96, DB: 15) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:51:22) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 69ms (View: 63, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 15:51:25) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "3", "7", "4", "5", "6", "8", "9", "10"], "_"=>""}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+  app/controllers/grocery_lists_controller.rb:42:in `sort'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:55:44) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x104239290>) on line #10 of app/views/grocery_lists/show.html.erb:
+7: <ul id="my_list" style="cursor: move">
+8: 	<% content_tag_for :li, @grocery_list.food_items do %>
+9: 		<span class="handle">[drag]</span>
+10: 		<%= f.name %>
+11: 	<% end %>
+12: </ul>
+13: 
+
+    app/views/grocery_lists/show.html.erb:10
+    app/views/grocery_lists/show.html.erb:8
+    app/controllers/grocery_lists_controller.rb:18:in `show'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:57:05) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+ActionView::TemplateError (undefined local variable or method `food_items' for #<ActionView::Base:0x1042c2388>) on line #9 of app/views/grocery_lists/show.html.erb:
+6: 
+7: <ul id="my_list" style="cursor: move">
+8: 	<% @grocery_list.food_items.each do |food_item| %>
+9: 		<% content_tag_for :li, food_items do %>
+10: 			<span class="handle">[drag]</span>
+11: 			<%= f.name %>
+12: 		<% end %>
+
+    app/views/grocery_lists/show.html.erb:9
+    app/views/grocery_lists/show.html.erb:8
+    app/controllers/grocery_lists_controller.rb:18:in `show'
+
+Rendered rescues/_trace (97.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:57:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x104388038>) on line #11 of app/views/grocery_lists/show.html.erb:
+8: 	<% @grocery_list.food_items.each do |food_item| %>
+9: 		<% content_tag_for :li, food_item do %>
+10: 			<span class="handle">[drag]</span>
+11: 			<%= f.name %>
+12: 		<% end %>
+13: 	<% end %>
+14: </ul>
+
+    app/views/grocery_lists/show.html.erb:11
+    app/views/grocery_lists/show.html.erb:9
+    app/views/grocery_lists/show.html.erb:8
+    app/controllers/grocery_lists_controller.rb:18:in `show'
+
+Rendered rescues/_trace (98.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:57:31) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 15:57:34) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "3", "4", "6", "5", "7", "8", "9", "10"], "_"=>""}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+  app/controllers/grocery_lists_controller.rb:42:in `sort'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 15:57:36) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "3", "6", "4", "5", "7", "8", "9", "10"], "_"=>""}
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+  app/controllers/grocery_lists_controller.rb:42:in `sort'
+
+Rendered rescues/_trace (31.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:58:09) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.8ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+ActionView::TemplateError (undefined local variable or method `’handle’' for #<ActionView::Base:0x1042c1cd0>) on line #19 of app/views/grocery_lists/show.html.erb:
+16: <%= sortable_element "my_list",
+17: 							:url => {:action => "sort", :id => @grocery_list},
+18: 							:complete => visual_effect(:highlight, "my_list",
+19: 							:handle => ’handle’)
+20: %>
+21: 
+22: 
+
+    app/views/grocery_lists/show.html.erb:19
+    app/controllers/grocery_lists_controller.rb:18:in `show'
+
+Rendered rescues/_trace (92.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 15:58:27) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 15:58:48) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "3", "4", "5", "6", "8", "7", "9", "10"], "_"=>""}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+  app/controllers/grocery_lists_controller.rb:42:in `sort'
+
+Rendered rescues/_trace (92.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 15:58:50) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "3", "8", "4", "5", "6", "7", "9", "10"], "_"=>""}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+  app/controllers/grocery_lists_controller.rb:42:in `sort'
+
+Rendered rescues/_trace (29.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-01-05 16:02:19) [GET]
+  Parameters: {"id"=>"4"}
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:47: syntax error, unexpected '?'
+       Faq.update_all([’position=?’, index+1], [’id=?’, id])  
+                                    ^
+/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:47: syntax error, unexpected '+', expecting '='
+       Faq.update_all([’position=?’, index+1], [’id=?’, id])  
+                                               ^
+/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:47: syntax error, unexpected '?'
+       Faq.update_all([’position=?’, index+1], [’id=?’, id])  
+                                                           ^
+/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:47: syntax error, unexpected ']', expecting '='
+       Faq.update_all([’position=?’, index+1], [’id=?’, id])  
+                                                                   ^
+/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:105: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:02:49) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:02:51) [GET]
+  Parameters: {"id"=>"whatever"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find GroceryList with ID=whatever):
+  app/controllers/grocery_lists_controller.rb:16:in `show'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:02:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:02:58) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "6", "3", "4", "5", "7", "8", "9", "10"], "_"=>""}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+  app/controllers/grocery_lists_controller.rb:42:in `sort'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:03:25) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "6", "3", "5", "4", "7", "8", "9", "10"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list12635478910controllergrocery_lists_
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+  app/controllers/grocery_lists_controller.rb:44:in `sort'
+  app/controllers/grocery_lists_controller.rb:43:in `sort'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:03:54) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "6", "3", "9", "5", "4", "7", "8", "10"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list12639547810controllergrocery_lists_
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:54', "position" = 4 WHERE "id" = 3[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:54', "position" = 7 WHERE "id" = 4[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:54', "position" = 6 WHERE "id" = 5[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:54', "position" = 3 WHERE "id" = 6[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:55', "position" = 8 WHERE "id" = 7[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:55', "position" = 9 WHERE "id" = 8[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:03:55', "position" = 5 WHERE "id" = 9[0m
+Completed in 89ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-05 16:04:03) [GET]
+  [4;36;1mGroceryList Load (0.4ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:04:05) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:04:11) [GET]
+  Parameters: {"id"=>"whatever"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find GroceryList with ID=whatever):
+  app/controllers/grocery_lists_controller.rb:16:in `show'
+
+Rendered rescues/_trace (91.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:04:15) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:04:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:04:22) [GET]
+  Parameters: {"id"=>"whatever"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find GroceryList with ID=whatever):
+  app/controllers/grocery_lists_controller.rb:16:in `show'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:04:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:04:27) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["10", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list10123456789controllergrocery_lists_
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;36;1mFoodItem Load (0.7ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:04:27', "position" = 2 WHERE "id" = 1[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:04:27', "position" = 3 WHERE "id" = 2[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:04:27', "position" = 5 WHERE "id" = 4[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:04:27', "position" = 7 WHERE "id" = 6[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:04:27', "position" = 10 WHERE "id" = 9[0m
+  [4;36;1mFoodItem Update (0.4ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:04:27', "position" = 1 WHERE "id" = 10[0m
+Completed in 88ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-05 16:05:01) [GET]
+  [4;35;1mGroceryList Load (0.4ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:05:02) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:06:23) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 73ms (View: 68, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:06:29) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["10", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list10123456789controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:06:54) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list12345678910controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 1 WHERE "id" = 1[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 2 WHERE "id" = 2[0m
+  [4;36;1mFoodItem Update (0.4ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 3 WHERE "id" = 3[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 4 WHERE "id" = 4[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 5 WHERE "id" = 5[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 6 WHERE "id" = 6[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 7 WHERE "id" = 7[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 8 WHERE "id" = 8[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 9 WHERE "id" = 9[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:54', "position" = 10 WHERE "id" = 10[0m
+Completed in 81ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:06:57) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["10", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list10123456789controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 2 WHERE "id" = 1[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 3 WHERE "id" = 2[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 4 WHERE "id" = 3[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 5 WHERE "id" = 4[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 6 WHERE "id" = 5[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 7 WHERE "id" = 6[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 8 WHERE "id" = 7[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 9 WHERE "id" = 8[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 10 WHERE "id" = 9[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:06:57', "position" = 1 WHERE "id" = 10[0m
+Completed in 107ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:07:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:08:02) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "5", "3", "4", "6", "7", "8", "9", "10"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list12534678910controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) [0m
+  [4;36;1mFoodItem Update (0.4ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 1 WHERE "id" = 1[0m
+  [4;35;1mFoodItem Update (0.4ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 2 WHERE "id" = 2[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 3 WHERE "id" = 5[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 6 WHERE "id" = 6[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 7 WHERE "id" = 7[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 8 WHERE "id" = 8[0m
+  [4;36;1mFoodItem Update (0.9ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 9 WHERE "id" = 9[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:08:02', "position" = 10 WHERE "id" = 10[0m
+Completed in 71ms (View: 1, DB: 4) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:08:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:09:06) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "5", "10", "3", "4", "6", "7", "8", "9"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list12510346789controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 5 WHERE "id" = 3[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 6 WHERE "id" = 4[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 7 WHERE "id" = 6[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 8 WHERE "id" = 7[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 9 WHERE "id" = 8[0m
+  [4;35;1mFoodItem Update (0.4ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 10 WHERE "id" = 9[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:06', "position" = 4 WHERE "id" = 10[0m
+Completed in 121ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-05 16:09:20) [GET]
+  [4;35;1mGroceryList Load (0.4ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:09:21) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:09:33) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["1", "2", "5", "3", "4", "6", "7", "8", "9", "10"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list12534678910controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 10 WHERE "id" = 10[0m
+  [4;35;1mFoodItem Update (0.4ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 4 WHERE "id" = 3[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 5 WHERE "id" = 4[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 6 WHERE "id" = 6[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 7 WHERE "id" = 7[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 8 WHERE "id" = 8[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:33', "position" = 9 WHERE "id" = 9[0m
+Completed in 157ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-05 16:09:35) [GET]
+  [4;35;1mGroceryList Load (0.4ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:09:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+Completed in 76ms (View: 71, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-05 16:09:39) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"4", "my_list"=>["10", "1", "2", "5", "3", "4", "6", "7", "8", "9"], "_"=>""}
+authenticity_tokenzE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=actionsortid4my_list10125346789controllergrocery_lists_
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+  [4;35;1mFoodItem Load (0.7ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 2 WHERE "id" = 1[0m
+  [4;35;1mFoodItem Update (0.4ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 3 WHERE "id" = 2[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 4 WHERE "id" = 5[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 5 WHERE "id" = 3[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 6 WHERE "id" = 4[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 7 WHERE "id" = 6[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 8 WHERE "id" = 7[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 9 WHERE "id" = 8[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 10 WHERE "id" = 9[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-06 00:09:39', "position" = 1 WHERE "id" = 10[0m
+Completed in 108ms (View: 1, DB: 3) | 200 OK [http://0.0.0.0/grocery_lists/sort/4]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-05 16:09:41) [GET]
+  [4;36;1mGroceryList Load (0.4ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-05 16:09:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]

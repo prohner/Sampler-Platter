@@ -38,11 +38,17 @@ class GroceryListsController < ApplicationController
   end
 
   def sort
+    logger.error (params)
     @grocery_list = GroceryList.find(params[:id])
     @grocery_list.food_items.each do | f |
-      f.position = params["grocery-list"].index(f.id.to_s)+1
+      f.position = params["my_list"].index(f.id.to_s)+1
       f.save
     end
+    #params[:faqs].each_with_index do |id, index|  
+    #   Faq.update_all([’position=?’, index+1], [’id=?’, id])  
+    # end  
+    render :nothing => true
+
   end
 
   # POST /grocery_lists
