@@ -1,0 +1,1 @@
+page.replace_html 'pagination_items_table', :partial => "pagination_items"
