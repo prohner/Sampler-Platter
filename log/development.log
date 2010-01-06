@@ -1144,3 +1144,966 @@ Rendering template within layouts/grocery_lists
 Rendering grocery_lists/show
   [4;36;1mFoodItem Load (0.6ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
 Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-05 19:48:05) [GET]
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/controllers/in_place_editor_controller.rb:2:in `in_place_edit_for'
+  app/controllers/in_place_editor_controller.rb:2
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:48:25) [GET]
+  [4;36;1mInPlaceEditor Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: in_place_editors: SELECT * FROM "in_place_editors" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: in_place_editors: SELECT * FROM "in_place_editors" ):
+  app/controllers/in_place_editor_controller.rb:18:in `index'
+
+Rendered rescues/_trace (93.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "in_place_editors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (14.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100106033756')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("food_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("grocery_lists")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("in_place_editors")[0m
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:48:44) [GET]
+  [4;35;1mInPlaceEditor Load (0.3ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering in_place_editor/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/index]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:49:59) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 145ms (View: 127, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor/index]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:50:28) [GET]
+  [4;35;1mInPlaceEditor Load (0.3ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined local variable or method `new_in_place_editor_path' for #<ActionView::Base:0x101dc72e0>) on line #20 of app/views/in_place_editor/index.html.erb:
+17: 
+18: <br />
+19: 
+20: <%= link_to 'New in_place_editor', new_in_place_editor_path %>
+
+    app/views/in_place_editor/index.html.erb:20
+
+Rendered rescues/_trace (105.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:50:58) [GET]
+  [4;36;1mInPlaceEditor Load (0.3ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined local variable or method `new_in_place_editor_path' for #<ActionView::Base:0x10205ff98>) on line #20 of app/views/in_place_editor/index.html.erb:
+17: 
+18: <br />
+19: 
+20: <%= link_to 'New in_place_editor', new_in_place_editor_path %>
+
+    app/views/in_place_editor/index.html.erb:20
+
+Rendered rescues/_trace (37.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:51:12) [GET]
+  [4;35;1mInPlaceEditor Load (0.3ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/index]
+
+
+Processing InPlaceEditorController#new (for 127.0.0.1 at 2010-01-05 19:51:16) [GET]
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/new
+Completed in 28ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/new]
+
+
+Processing InPlaceEditorController#new (for 127.0.0.1 at 2010-01-05 19:52:05) [GET]
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/new]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mInPlaceEditor Create (19.7ms)[0m   [0mINSERT INTO "in_place_editors" ("name", "created_at", "updated_at", "phone", "email") VALUES('Preston', '2010-01-06 03:57:01', '2010-01-06 03:57:01', '818-555-1212', 'preston@preston.com')[0m
+  [4;36;1mInPlaceEditor Create (0.1ms)[0m   [0;1mINSERT INTO "in_place_editors" ("name", "created_at", "updated_at", "phone", "email") VALUES('Clark', '2010-01-06 03:57:01', '2010-01-06 03:57:01', '818-555-1234', 'clark@clark.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100106035440')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("food_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("grocery_lists")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("in_place_editors")[0m
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:57:09) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined method `in_place_editor_path' for #<ActionView::Base:0x101db33d0>) on line #11 of app/views/in_place_editor/index.html.erb:
+8: <% @in_place_editors.each do |in_place_editor| %>
+9:   <tr>
+10:     <td><%=h in_place_editor.name %></td>
+11:     <td><%= link_to 'Show', in_place_editor %></td>
+12:     <td><%= link_to 'Edit', edit_in_place_editor_path(in_place_editor) %></td>
+13:     <td><%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %></td>
+14:   </tr>
+
+    app/views/in_place_editor/index.html.erb:11
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (88.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:57:14) [GET]
+  [4;35;1mInPlaceEditor Load (0.4ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined method `in_place_editor_path' for #<ActionView::Base:0x101f18e28>) on line #11 of app/views/in_place_editor/index.html.erb:
+8: <% @in_place_editors.each do |in_place_editor| %>
+9:   <tr>
+10:     <td><%=h in_place_editor.name %></td>
+11:     <td><%= link_to 'Show', in_place_editor %></td>
+12:     <td><%= link_to 'Edit', edit_in_place_editor_path(in_place_editor) %></td>
+13:     <td><%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %></td>
+14:   </tr>
+
+    app/views/in_place_editor/index.html.erb:11
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (88.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:57:46) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined method `edit_in_place_editor_path' for #<ActionView::Base:0x1021cba30>) on line #11 of app/views/in_place_editor/index.html.erb:
+8: <% @in_place_editors.each do |in_place_editor| %>
+9:   <tr>
+10:     <td><%=h in_place_editor.name %></td>
+11:     <td><%= link_to 'Edit', edit_in_place_editor_path(in_place_editor) %></td>
+12:     <td><%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %></td>
+13:   </tr>
+14: <% end %>
+
+    app/views/in_place_editor/index.html.erb:11
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:58:30) [GET]
+  [4;35;1mInPlaceEditor Load (0.5ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined method `in_place_editor_path' for #<ActionView::Base:0x10058ca40>) on line #12 of app/views/in_place_editor/index.html.erb:
+9:   <tr>
+10:     <td><%=h in_place_editor.name %></td>
+11:     <td><%= link_to 'Show', :action => 'show' %></td>
+12:     <td><%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %></td>
+13:   </tr>
+14: <% end %>
+15: </table>
+
+    app/views/in_place_editor/index.html.erb:12
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (60.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:59:15) [GET]
+  [4;36;1mInPlaceEditor Load (1.1ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (undefined method `in_place_editor_path' for #<ActionView::Base:0x10153f1e0>) on line #12 of app/views/in_place_editor/index.html.erb:
+9:   <tr>
+10:     <td><%=h in_place_editor.name %></td>
+11:     <td><%= link_to 'Show', :action => 'show' %></td>
+12: <!--    <td><%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %></td>
+13: -->
+14:   </tr>
+15: <% end %>
+
+    app/views/in_place_editor/index.html.erb:12
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 19:59:54) [GET]
+  [4;35;1mInPlaceEditor Load (0.5ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 19:59:58) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find InPlaceEditor without an ID):
+  app/controllers/in_place_editor_controller.rb:14:in `show'
+
+Rendered rescues/_trace (82.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:00:05) [GET]
+  [4;36;1mInPlaceEditor Load (0.8ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:00:24) [GET]
+  [4;35;1mInPlaceEditor Load (0.4ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:00:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:00:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:01:02) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"1", "value"=>"Prestone", "_"=>"", "editorId"=>"in_place_editor_name_1_in_place_editor"}
+
+ActionController::UnknownAction (No action responded to set_in_place_editor_name. Actions: create, index, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:01:55) [GET]
+  [4;36;1mInPlaceEditor Load (1.1ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:01:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:02:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInPlaceEditor Load (0.3ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:02:47) [GET]
+  [4;35;1mInPlaceEditor Load (0.6ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:03:57) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #11 of app/views/in_place_editor/index.html.erb:
+8: <% @in_place_editors.each do |in_place_editor| %>
+9:   <tr>
+10:     <td><%=h in_place_editor.name %>
+11: 		<%= in_place_editor_field :in_place_editor, 'name' %>
+12: 	</td>
+13: 
+14:     <td><%= link_to 'Show', :action => 'show', :id => in_place_editor.id %></td>
+
+    app/views/in_place_editor/index.html.erb:11
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:04:05) [GET]
+  [4;35;1mInPlaceEditor Load (0.6ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #11 of app/views/in_place_editor/index.html.erb:
+8: <% @in_place_editors.each do |in_place_editor| %>
+9:   <tr>
+10:     <td><%=h in_place_editor.name %>
+11: 		<%= in_place_editor_field :in_place_editor, 'name' %>
+12: 	</td>
+13: 
+14:     <td><%= link_to 'Show', :action => 'show', :id => in_place_editor.id %></td>
+
+    app/views/in_place_editor/index.html.erb:11
+    app/views/in_place_editor/index.html.erb:8:in `each'
+    app/views/in_place_editor/index.html.erb:8
+
+Rendered rescues/_trace (94.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:04:31) [GET]
+  [4;36;1mInPlaceEditor Load (0.7ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:04:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:08:39) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "_"=>"", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+
+ActionController::UnknownAction (No action responded to set_in_place_editor_name. Actions: create, index, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-05 20:10:05) [GET]
+Rendering samples/index
+Completed in 63ms (View: 62, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:10:07) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:10:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:10:19) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "_"=>"", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.3ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;35;1mInPlaceEditor Update (0.4ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:10:19', "name" = NULL WHERE "id" = 2[0m
+
+ActionView::MissingTemplate (Missing template in_place_editor/set_in_place_editor_name.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-05 20:10:22) [GET]
+Rendering samples/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:10:24) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:11:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.3ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 75ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:12:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #8 of app/views/in_place_editor/show.html.erb:
+5: <%= in_place_editor_field :in_place_editor, 'name' %>
+6: <hr />
+7: 
+8: <% if @example.name.blank? %><a id="edit_name">Edit</a><% end -%>
+9: <%= in_place_editor_field :in_place_editor, 'name', {}, {:script => true, :external_control => 'edit_name'} %>
+
+    app/views/in_place_editor/show.html.erb:8
+
+Rendered rescues/_trace (33.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:12:28) [GET]
+  [4;35;1mInPlaceEditor Load (0.4ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:12:33) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:12:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #8 of app/views/in_place_editor/show.html.erb:
+5: <%= in_place_editor_field :in_place_editor, 'name' %>
+6: <hr />
+7: 
+8: <% if @example.name.blank? %><a id="edit_name">Edit</a><% end -%>
+9: <%= in_place_editor_field :in_place_editor, 'name', {}, {:script => true, :external_control => 'edit_name'} %>
+
+    app/views/in_place_editor/show.html.erb:8
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:12:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #8 of app/views/in_place_editor/show.html.erb:
+5: <%= in_place_editor_field :in_place_editor, 'name' %>
+6: <hr />
+7: 
+8: <% if @example.name.nil? || @example.name.blank? %><a id="edit_name">Edit</a><% end -%>
+9: <%= in_place_editor_field :in_place_editor, 'name', {}, {:script => true, :external_control => 'edit_name'} %>
+
+    app/views/in_place_editor/show.html.erb:8
+
+Rendered rescues/_trace (103.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:13:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #8 of app/views/in_place_editor/show.html.erb:
+5: <%= in_place_editor_field :in_place_editor, 'name' %>
+6: <hr />
+7: 
+8: <% if @example.name == nil || @example.name.blank? %><a id="edit_name">Edit</a><% end -%>
+9: <%= in_place_editor_field :in_place_editor, 'name', {}, {:script => true, :external_control => 'edit_name'} %>
+
+    app/views/in_place_editor/show.html.erb:8
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:13:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #8 of app/views/in_place_editor/show.html.erb:
+5: <%= in_place_editor_field :in_place_editor, 'name' %>
+6: <hr />
+7: 
+8: <% if 1==0 &&  @example.name == nil || @example.name.blank? %><a id="edit_name">Edit</a><% end -%>
+9: <% if @example.name == nil || @example.name.blank? %><a id="edit_name">Edit</a><% end -%>
+10: <%= in_place_editor_field :in_place_editor, 'name', {}, {:script => true, :external_control => 'edit_name'} %>
+
+    app/views/in_place_editor/show.html.erb:8
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:14:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:14:36) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;35;1mInPlaceEditor Update (0.2ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:14:36', "name" = 'Clarker' WHERE "id" = 2[0m
+
+ActionView::MissingTemplate (Missing template in_place_editor/set_in_place_editor_name.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-05 20:14:38) [GET]
+Rendering samples/index
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:14:41) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:16:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:16:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:16:56) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"1", "value"=>"Prestone", "editorId"=>"in_place_editor_name_1_in_place_editor"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+  [4;36;1mInPlaceEditor Update (0.3ms)[0m   [0;1mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:16:56', "name" = 'Prestone' WHERE "id" = 1[0m
+
+ActionView::MissingTemplate (Missing template in_place_editor/set_in_place_editor_name.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:17:08) [GET]
+  [4;35;1mInPlaceEditor Load (0.6ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:18:20) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#new (for 127.0.0.1 at 2010-01-05 20:18:38) [GET]
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/new
+Completed in 54ms (View: 51, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/new]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-05 20:18:40) [GET]
+Rendering samples/index
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:18:42) [GET]
+  [4;35;1mInPlaceEditor Load (0.5ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:19:18) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:19:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInPlaceEditor Load (1.0ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 63ms (View: 56, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:19:30) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"1", "value"=>"Preston", "editorId"=>"in_place_editor_name_1_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+  [4;35;1mInPlaceEditor Update (0.2ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:19:30', "name" = 'Preston' WHERE "id" = 1[0m
+
+ActionView::MissingTemplate (Missing template in_place_editor/set_in_place_editor_name.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:19:32) [GET]
+  [4;36;1mInPlaceEditor Load (0.6ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:19:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:19:56) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;35;1mInPlaceEditor Update (0.2ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:19:56', "name" = '' WHERE "id" = 2[0m
+
+ActionView::MissingTemplate (Missing template in_place_editor/set_in_place_editor_name.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:20:04) [GET]
+  [4;36;1mInPlaceEditor Load (0.6ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:20:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:20:11) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:20:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:20:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #7 of app/views/in_place_editor/show.html.erb:
+4: 
+5: <hr />
+6: 
+7: <% if @example.name == nil || @example.name.blank? %>
+8: 	<a id="edit_name">Edit</a>
+9: <% end -%>
+10: 
+
+    app/views/in_place_editor/show.html.erb:7
+
+Rendered rescues/_trace (87.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:21:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:21:09) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:21:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:21:17) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clark", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;35;1mInPlaceEditor Update (13.2ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:21:17', "name" = 'Clark' WHERE "id" = 2[0m
+
+ActionView::MissingTemplate (Missing template in_place_editor/set_in_place_editor_name.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:21:29) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 49ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:24:11) [GET]
+  [4;35;1mInPlaceEditor Load (0.4ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:24:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-05 20:25:19) [GET]
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/controllers/in_place_editor_controller.rb:2:in `in_place_edit_for'
+  app/controllers/in_place_editor_controller.rb:2
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:35:26) [GET]
+  [4;35;1mInPlaceEditor Load (0.4ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:35:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 62ms (View: 58, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:35:34) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;36;1mInPlaceEditor Update (0.3ms)[0m   [0;1mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:35:34', "name" = 'Clarker' WHERE "id" = 2[0m
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/set_in_place_editor_name/2?value=Clarker&authenticity_token=zE9L4X2Z4bX3QLDb4G%2FwHvEr4y647inNNBEc7gXOdaY%3D&editorId=in_place_editor_name_2_in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:38:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:39:04) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clark", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;35;1mInPlaceEditor Update (0.3ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:39:04', "name" = 'Clark' WHERE "id" = 2[0m
+Completed in 15ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/set_in_place_editor_name/2?value=Clark&authenticity_token=zE9L4X2Z4bX3QLDb4G%2FwHvEr4y647inNNBEc7gXOdaY%3D&editorId=in_place_editor_name_2_in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:39:44) [GET]
+  [4;36;1mInPlaceEditor Load (0.5ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:39:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:39:52) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+Completed in 2ms (View: 0, DB: 0) | 405 Method Not Allowed [http://0.0.0.0/in_place_editor/set_in_place_editor_name/2?value=Clarker&authenticity_token=zE9L4X2Z4bX3QLDb4G%2FwHvEr4y647inNNBEc7gXOdaY%3D&editorId=in_place_editor_name_2_in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:40:31) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:40:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.1ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:40:38) [GET]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+Completed in 2ms (View: 1, DB: 0) | 405 Method Not Allowed [http://0.0.0.0/in_place_editor/set_in_place_editor_name/2?value=Clarker&authenticity_token=zE9L4X2Z4bX3QLDb4G%2FwHvEr4y647inNNBEc7gXOdaY%3D&editorId=in_place_editor_name_2_in_place_editor]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:43:15) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:43:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/2]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:43:22) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"2", "value"=>"Clarker", "_"=>"", "editorId"=>"in_place_editor_name_2_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 2) [0m
+  [4;35;1mInPlaceEditor Update (16.3ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:43:22', "name" = 'Clarker' WHERE "id" = 2[0m
+Completed in 40ms (View: 1, DB: 16) | 200 OK [http://0.0.0.0/in_place_editor/set_in_place_editor_name/2]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-05 20:43:26) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-05 20:43:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mInPlaceEditor Load (0.2ms)[0m   [0mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/in_place_editor
+Rendering in_place_editor/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/show/1]
+
+
+Processing InPlaceEditorController#set_in_place_editor_name (for 127.0.0.1 at 2010-01-05 20:43:33) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "id"=>"1", "value"=>"Prestone", "_"=>"", "editorId"=>"in_place_editor_name_1_in_place_editor"}
+  [4;36;1mInPlaceEditor Load (0.2ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+  [4;35;1mInPlaceEditor Update (0.2ms)[0m   [0mUPDATE "in_place_editors" SET "updated_at" = '2010-01-06 04:43:33', "name" = 'Prestone' WHERE "id" = 1[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/in_place_editor/set_in_place_editor_name/1]
