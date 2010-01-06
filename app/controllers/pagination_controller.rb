@@ -3,10 +3,7 @@ class PaginationController < ApplicationController
   ## TODO:  The query value from the form gets lost when you click the will_paginate navigation links
   
   def index
-    @pagination_items = PaginationItem.paginate :per_page => 5,
-                                                :page => params[:page],
-                                                :conditions => [ 'name like ?', "%#{params[:query]}%" ],
-                                                :order => :name
+    @pagination_items = PaginationItem.search(params[:query], params[:page]) 
     respond_to do |format|
       format.html
       format.js {
