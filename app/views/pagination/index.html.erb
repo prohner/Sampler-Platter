@@ -16,13 +16,10 @@
          :update => 'table',
          :before => "Element.show('spinner')",
          :success => "Element.hide('spinner')",
-         :url => {:action => 'list'},
+         :url => {:action => 'index'},
          :with => 'query' %>
 
 
 <div id="pagination_items_table">
 <%= render :partial => "pagination_items" %>
-</div>
-<div id="pagination_pages">
-  <%= will_paginate @pagination_items %>
 </div>

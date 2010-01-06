@@ -3256,3 +3256,639 @@ Rendered pagination/_pagination_item (0.1ms)
 Rendered pagination/_pagination_item (0.1ms)
 Rendered pagination/_pagination_items (3.3ms)
 Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:27:48) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.0ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:27:52) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+ERROR: compiling _run_rjs_app47views47pagination47list46js46rjs RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/pagination/list.js.rjs:2: syntax error, unexpected tIVAR, expecting kDO or '{' or '('
+Function body:           def _run_rjs_app47views47pagination47list46js46rjs(local_assigns)
+            old_output_buffer = output_buffer;;@template_format = :html;controller.response.content_type ||= Mime::JS;update_page do |page|;page.replace_html 'pagination_items_table', :partial => "pagination_items"
+page.replace_html 'pagination_pages', will_paginate @pagination_items
+
+end
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/pagination/list.js.rjs:7:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/pagination/list.js.rjs:2: syntax error, unexpected tIVAR, expecting kDO or '{' or '(') on line #2 of app/views/pagination/list.js.rjs:
+1: page.replace_html 'pagination_items_table', :partial => "pagination_items"
+2: page.replace_html 'pagination_pages', will_paginate @pagination_items
+
+    app/views/pagination/list.js.rjs:7:in `compile!'
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:28:08) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.6ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:28:12) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.3ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:28:39) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.5ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:28:41) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.9ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.3ms)
+<div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/pagination/list?page=2" rel="next">2</a> <a href="/pagination/list?page=3">3</a> <a href="/pagination/list?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:29:07) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"f"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%f%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (1.4ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.4ms)
+
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:29:41) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>""}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.9ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.2ms)
+<div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/pagination/list?page=2" rel="next">2</a> <a href="/pagination/list?page=3">3</a> <a href="/pagination/list?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:29:47) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;36;1mPaginationItem Load (0.7ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (1.0ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (53.3ms)
+<div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/pagination/list?page=2" rel="next">2</a> <a href="/pagination/list?page=3">3</a> <a href="/pagination/list?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+Completed in 60ms (View: 55, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:29:51) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaginationItem Load (0.7ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+
+ActionView::MissingTemplate (Missing template pagination/list.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:29:54) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.5ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:03) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.6ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=2]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:05) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mPaginationItem Load (0.7ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 10[0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.8ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=3]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:07) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.0ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.8ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:09) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.6ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=2]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:10) [GET]
+  Parameters: {"page"=>"3"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 10[0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.7ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.3ms)
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=3]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:11) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.5ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=2]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:30:13) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.0ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (2.7ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:31:09) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"f"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%f%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.3ms)
+
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:31:13) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>""}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.9ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (53.8ms)
+<div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/pagination/list?page=2" rel="next">2</a> <a href="/pagination/list?page=3">3</a> <a href="/pagination/list?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+Completed in 61ms (View: 56, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:31:19) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.2ms)
+<div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/pagination/list?page=2" rel="next">2</a> <a href="/pagination/list?page=3">3</a> <a href="/pagination/list?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:34:25) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.5ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:34:29) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.9ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.7ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:34:33) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"f"}
+  [4;35;1mPaginationItem Load (0.5ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%f%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (1.4ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.5ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:34:39) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"at"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%at%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.5ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#list (for 127.0.0.1 at 2010-01-06 11:34:45) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendering pagination/list
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.6ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination/list]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:37:24) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.8ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.0ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:37:28) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+
+NameError (undefined local variable or method `page' for #<PaginationController:0x104252fd8>):
+  app/controllers/pagination_controller.rb:12:in `index'
+  app/controllers/pagination_controller.rb:9:in `index'
+
+Rendered rescues/_trace (78.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:14) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.0ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:18) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendered pagination/_pagination_item (0.7ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.4ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:22) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"at"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%at%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.4ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:27) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"f"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%f%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendered pagination/_pagination_item (1.4ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (54.3ms)
+Completed in 59ms (View: 55, DB: 1) | 200 OK [http://0.0.0.0/pagination]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:30) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"at"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%at%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.5ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:34) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"a"}
+  [4;36;1mPaginationItem Load (1.1ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%a%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%a%') [0m
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.6ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:38) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaginationItem Load (0.6ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.7ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.4ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=2]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:43) [GET]
+  Parameters: {"page"=>"3"}
+  [4;36;1mPaginationItem Load (0.5ms)[0m   [0;1mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 10[0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.4ms)
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=3]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:46) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.3ms)
+Completed in 60ms (View: 56, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=2]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:38:53) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.1ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=1]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:39:01) [POST]
+  Parameters: {"authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY=", "_"=>"", "query"=>"i"}
+  [4;35;1mPaginationItem Load (0.6ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%i%') ORDER BY name LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%i%') [0m
+Rendered pagination/_pagination_item (0.7ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.3ms)
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination]
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-06 11:39:05) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mPaginationItem Load (0.7ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 5[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pagination_items" WHERE (name like '%%') [0m
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (0.8ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (3.4ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=2]
