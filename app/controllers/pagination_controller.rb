@@ -1,5 +1,6 @@
 class PaginationController < ApplicationController
   ## http://www.smashingmagazine.com/2007/11/16/pagination-gallery-examples-and-good-practices/
+  ## TODO:  The query value from the form gets lost when you click the will_paginate navigation links
   
   def index
     @pagination_items = PaginationItem.paginate :per_page => 5,
@@ -16,13 +17,4 @@ class PaginationController < ApplicationController
     end
   end
   
-  def list 
-    logger.error("LANDED IN LIST ACCIDENTALLY")
-    paginate_data
-  end
-  
-private
-
-  def paginate_data
-  end
 end
