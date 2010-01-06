@@ -1,0 +1,2 @@
+module InPlaceEditorHelper
+end

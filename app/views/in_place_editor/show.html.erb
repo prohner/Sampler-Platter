@@ -1,0 +1,12 @@
+<h1>InPlaceEditor#show</h1>
+<p>Find me in app/views/in_place_editor/show.html.erb</p>
+
+
+When the mouse floats over the name, it highlights and then can edit.
+<hr />
+
+<% if @in_place_editor.name == nil || @in_place_editor.name.blank? %>
+	<a id="edit_name">[ Edit ]</a>
+<% end -%>
+
+<%= in_place_editor_field :in_place_editor, :name %>

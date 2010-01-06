@@ -1,0 +1,23 @@
+<h1>Listing in_place_editors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>View in order to edit</th>
+  </tr>
+
+<% @in_place_editors.each do |in_place_editor| %>
+  <tr>
+	<td>
+		<%=h in_place_editor.name %>
+	</td>
+
+    <td><%= link_to 'Show', :action => 'show', :id => in_place_editor.id %></td>
+    <td><!--%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %--></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New in_place_editor', :action => 'new' %>
