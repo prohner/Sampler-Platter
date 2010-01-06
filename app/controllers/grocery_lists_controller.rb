@@ -38,7 +38,6 @@ class GroceryListsController < ApplicationController
   end
 
   def sort
-    logger.error (params)
     @grocery_list = GroceryList.find(params[:id])
     @grocery_list.food_items.each do | f |
       f.position = params["my_list"].index(f.id.to_s)+1
