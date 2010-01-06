@@ -2628,3 +2628,447 @@ Rendered pagination/_pagination_item (0.1ms)
 Rendered pagination/_pagination_item (0.1ms)
 Rendered pagination/_pagination_items (5.2ms)
 Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+
+
+Processing GroceryListsController#create (for 0.0.0.0 at 2010-01-06 13:34:22) [POST]
+  Parameters: {"grocery_list"=>{}}
+  [4;35;1mGroceryList Create (0.4ms)[0m   [0mINSERT INTO "grocery_lists" ("name", "created_at", "updated_at") VALUES(NULL, '2010-01-06 21:34:22', '2010-01-06 21:34:22')[0m
+  [4;36;1mFoodItem Load (0.1ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 1', 1, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 2', 2, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 3', 3, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 4', 4, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 5', 5, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 6', 6, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 7', 7, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 8', 8, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 9', 9, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+  [4;36;1mFoodItem Load (0.3ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 10', 10, '2010-01-06 21:34:22', '2010-01-06 21:34:22', 996332878)[0m
+Redirected to http://test.host/grocery_lists/996332878
+Completed in 32ms (DB: 4) | 302 Found [http://test.host/grocery_lists?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#destroy (for 0.0.0.0 at 2010-01-06 13:34:22) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+  [4;36;1mGroceryList Destroy (0.2ms)[0m   [0;1mDELETE FROM "grocery_lists" WHERE "id" = 953125641[0m
+Redirected to http://test.host/grocery_lists
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/grocery_lists/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#edit (for 0.0.0.0 at 2010-01-06 13:34:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/edit
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641/edit]
+
+
+Processing GroceryListsController#index (for 0.0.0.0 at 2010-01-06 13:34:22) [GET]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/grocery_lists]
+
+
+Processing GroceryListsController#new (for 0.0.0.0 at 2010-01-06 13:34:22) [GET]
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/new]
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#show (for 0.0.0.0 at 2010-01-06 13:34:22) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.1ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 953125641) ORDER BY position[0m
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#update (for 0.0.0.0 at 2010-01-06 13:34:22) [PUT]
+  Parameters: {"id"=>"953125641", "grocery_list"=>{}}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Redirected to http://test.host/grocery_lists/953125641
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/grocery_lists/953125641?]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:34:22) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_items (1.8ms)
+Completed in 55ms (View: 5, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:34:23) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (5.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+
+
+Processing GroceryListsController#create (for 0.0.0.0 at 2010-01-06 13:34:38) [POST]
+  Parameters: {"grocery_list"=>{}}
+  [4;35;1mGroceryList Create (0.3ms)[0m   [0mINSERT INTO "grocery_lists" ("name", "created_at", "updated_at") VALUES(NULL, '2010-01-06 21:34:38', '2010-01-06 21:34:38')[0m
+  [4;36;1mFoodItem Load (0.1ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 1', 1, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 2', 2, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 3', 3, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 4', 4, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 5', 5, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 6', 6, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 7', 7, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 8', 8, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 9', 9, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 10', 10, '2010-01-06 21:34:38', '2010-01-06 21:34:38', 996332878)[0m
+Redirected to http://test.host/grocery_lists/996332878
+Completed in 30ms (DB: 4) | 302 Found [http://test.host/grocery_lists?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#destroy (for 0.0.0.0 at 2010-01-06 13:34:38) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+  [4;36;1mGroceryList Destroy (0.2ms)[0m   [0;1mDELETE FROM "grocery_lists" WHERE "id" = 953125641[0m
+Redirected to http://test.host/grocery_lists
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/grocery_lists/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#edit (for 0.0.0.0 at 2010-01-06 13:34:38) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/edit
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641/edit]
+
+
+Processing GroceryListsController#index (for 0.0.0.0 at 2010-01-06 13:34:38) [GET]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/grocery_lists]
+
+
+Processing GroceryListsController#new (for 0.0.0.0 at 2010-01-06 13:34:38) [GET]
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/new]
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#show (for 0.0.0.0 at 2010-01-06 13:34:38) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.1ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 953125641) ORDER BY position[0m
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#update (for 0.0.0.0 at 2010-01-06 13:34:38) [PUT]
+  Parameters: {"id"=>"953125641", "grocery_list"=>{}}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Redirected to http://test.host/grocery_lists/953125641
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/grocery_lists/953125641?]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:34:38) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_items (1.8ms)
+Completed in 54ms (View: 5, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:34:39) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (5.4ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+
+
+Processing GroceryListsController#create (for 0.0.0.0 at 2010-01-06 13:35:48) [POST]
+  Parameters: {"grocery_list"=>{}}
+  [4;35;1mGroceryList Create (0.4ms)[0m   [0mINSERT INTO "grocery_lists" ("name", "created_at", "updated_at") VALUES(NULL, '2010-01-06 21:35:48', '2010-01-06 21:35:48')[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 1', 1, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 2', 2, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 3', 3, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 4', 4, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 5', 5, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 6', 6, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 7', 7, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 8', 8, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 9', 9, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 10', 10, '2010-01-06 21:35:48', '2010-01-06 21:35:48', 996332878)[0m
+Redirected to http://test.host/grocery_lists/996332878
+Completed in 33ms (DB: 5) | 302 Found [http://test.host/grocery_lists?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#destroy (for 0.0.0.0 at 2010-01-06 13:35:48) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+  [4;36;1mGroceryList Destroy (0.2ms)[0m   [0;1mDELETE FROM "grocery_lists" WHERE "id" = 953125641[0m
+Redirected to http://test.host/grocery_lists
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/grocery_lists/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#edit (for 0.0.0.0 at 2010-01-06 13:35:48) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/edit
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641/edit]
+
+
+Processing GroceryListsController#index (for 0.0.0.0 at 2010-01-06 13:35:48) [GET]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/grocery_lists]
+
+
+Processing GroceryListsController#new (for 0.0.0.0 at 2010-01-06 13:35:48) [GET]
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/new]
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#show (for 0.0.0.0 at 2010-01-06 13:35:48) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.1ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 953125641) ORDER BY position[0m
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#update (for 0.0.0.0 at 2010-01-06 13:35:48) [PUT]
+  Parameters: {"id"=>"953125641", "grocery_list"=>{}}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Redirected to http://test.host/grocery_lists/953125641
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/grocery_lists/953125641?]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:35:48) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_items (1.9ms)
+Completed in 54ms (View: 5, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:35:48) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (5.3ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+
+
+Processing GroceryListsController#create (for 0.0.0.0 at 2010-01-06 13:40:42) [POST]
+  Parameters: {"grocery_list"=>{}}
+  [4;35;1mGroceryList Create (0.3ms)[0m   [0mINSERT INTO "grocery_lists" ("name", "created_at", "updated_at") VALUES(NULL, '2010-01-06 21:40:42', '2010-01-06 21:40:42')[0m
+  [4;36;1mFoodItem Load (0.1ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 1', 1, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 2', 2, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 3', 3, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 4', 4, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 5', 5, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 6', 6, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 7', 7, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 8', 8, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 9', 9, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+  [4;36;1mFoodItem Load (0.2ms)[0m   [0;1mSELECT * FROM "food_items" WHERE (grocery_list_id = 996332878) ORDER BY position DESC LIMIT 1[0m
+  [4;35;1mFoodItem Create (0.1ms)[0m   [0mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 10', 10, '2010-01-06 21:40:42', '2010-01-06 21:40:42', 996332878)[0m
+Redirected to http://test.host/grocery_lists/996332878
+Completed in 30ms (DB: 4) | 302 Found [http://test.host/grocery_lists?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#destroy (for 0.0.0.0 at 2010-01-06 13:40:42) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+  [4;36;1mGroceryList Destroy (0.2ms)[0m   [0;1mDELETE FROM "grocery_lists" WHERE "id" = 953125641[0m
+Redirected to http://test.host/grocery_lists
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/grocery_lists/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "grocery_lists" [0m
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#edit (for 0.0.0.0 at 2010-01-06 13:40:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/edit
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641/edit]
+
+
+Processing GroceryListsController#index (for 0.0.0.0 at 2010-01-06 13:40:42) [GET]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/grocery_lists]
+
+
+Processing GroceryListsController#new (for 0.0.0.0 at 2010-01-06 13:40:42) [GET]
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/new]
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#show (for 0.0.0.0 at 2010-01-06 13:40:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (0.1ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 953125641) ORDER BY position[0m
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/grocery_lists/953125641]
+  [4;36;1mGroceryList Load (0.2ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+
+
+Processing GroceryListsController#update (for 0.0.0.0 at 2010-01-06 13:40:42) [PUT]
+  Parameters: {"id"=>"953125641", "grocery_list"=>{}}
+  [4;35;1mGroceryList Load (0.2ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 953125641) [0m
+Redirected to http://test.host/grocery_lists/953125641
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/grocery_lists/953125641?]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:40:42) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_items (1.8ms)
+Completed in 54ms (View: 5, DB: 0) | 200 OK [http://test.host/pagination?page=2]
+
+
+Processing PaginationController#index (for 0.0.0.0 at 2010-01-06 13:40:42) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/pagination
+Rendering pagination/index
+Rendered pagination/_pagination_item (1.3ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_item (0.1ms)
+Rendered pagination/_pagination_items (5.2ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/pagination?page=2]
