@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100106035440) do
+ActiveRecord::Schema.define(:version => 20100106160032) do
 
   create_table "food_items", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20100106035440) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pagination_items", :force => true do |t|
+    t.string   "name",       :limit => 30
+    t.integer  "quantity",                 :default => 0, :null => false
+    t.integer  "price",                    :default => 0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

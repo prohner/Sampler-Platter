@@ -1,0 +1,44 @@
+<h1>Pagination</h1>
+
+<form name="sform" action="" style="display:inline;">
+	<label for="item_name">Filter on item name  : </label>
+	<%= text_field_tag("query", params['query'], :size => 10 ) %>
+</form>
+
+<%= image_tag("spinner.gif",
+              :align => "absmiddle",
+              :border => 0,
+              :id => "spinner",
+              :style =>"display: none;" ) %>
+</p>
+
+<%= observe_field 'query',  :frequency => 2,
+         :update => 'table',
+         :before => "Element.show('spinner')",
+         :success => "Element.hide('spinner')",
+         :url => {:action => 'list'},
+         :with => 'query' %>
+
+
+<table>
+  <thead>
+    <tr>
+      <td <%= sort_td_class_helper "name" %>>
+        <%= sort_link_helper "Name", "name" %>
+      </td>
+      <td <%= sort_td_class_helper "qty" %>>
+        <%= sort_link_helper "Quantity", "qty" %>
+      </td>
+      <td <%= sort_td_class_helper "price" %>>
+        <%= sort_link_helper "Price", "price" %>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+	
+	<%= render :partial => "pagination_item", :collection => @pagination_items %>
+	
+  </tbody>
+</table>
+
+<%= will_paginate @pagination_items %>
