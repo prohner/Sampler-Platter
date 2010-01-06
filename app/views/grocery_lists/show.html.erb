@@ -1,0 +1,27 @@
+<p>
+  <b>Name:</b>
+  <%=h @grocery_list.name %>
+</p>
+
+<style>
+li .handle { color: #777; cursor: move; font-size: 12px; }￼  
+</style>
+
+<ul id="my_list" style="cursor: move">
+	<% @grocery_list.food_items.each do |food_item| %>
+		<% content_tag_for :li, food_item do %>
+			<span class="handle">[click here to drag]</span>
+			<%= h food_item.name %>
+		<% end %>
+	<% end %>
+</ul>
+
+<%= sortable_element "my_list",
+							:url => {:action => "sort", :id => @grocery_list},
+							:complete => visual_effect(:highlight, "my_list",
+							:handle => 'handle')
+%>
+
+
+<%= link_to 'Edit', edit_grocery_list_path(@grocery_list) %> |
+<%= link_to 'Back', grocery_lists_path %>
