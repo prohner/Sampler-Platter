@@ -5746,3 +5746,102 @@ Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:44:44) [GET]
 Rendering template within layouts/blogs
 Rendering blogs/index
 Completed in 7ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-06 20:56:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mBlog Load (0.7ms)[0m   [0mSELECT * FROM "blogs" WHERE ("blogs"."id" = 4) [0m
+Rendering template within layouts/blogs
+Rendering blogs/show
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/blogs/4]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 20:57:00) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:57:02) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 20:57:04) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+  [4;35;1mBlog Load (0.6ms)[0m   [0mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%t%') ORDER BY title ASC LIMIT 10[0m
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 20:58:08) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:58:12) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 57ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:58:30) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:59:14) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 20:59:39) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 21:00:09) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-06 21:00:11) [GET]
+Rendering samples/index
+Completed in 62ms (View: 61, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-07 10:23:42) [GET]
+  [4;35;1mGroceryList Load (18.4ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 123ms (View: 67, DB: 18) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-07 10:23:44) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (1.4ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+Completed in 73ms (View: 67, DB: 2) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-07 10:23:47) [GET]
+Rendering samples/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-07 10:23:49) [GET]
+  [4;36;1mGroceryList Load (0.4ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
