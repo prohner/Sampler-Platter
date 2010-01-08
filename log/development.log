@@ -5392,3 +5392,456 @@ Completed in 9ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pagination?page=3]
   [4;35;1mSQL (3.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100106033756')[0m
   [4;36;1mSQL (5.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106035440')[0m
   [4;35;1mSQL (4.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100106141028')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 14:28:26) [GET]
+
+ActionController::RoutingError (No route matches "/blog" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 14:28:31) [GET]
+
+ActionController::RoutingError (No route matches "/blog" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:28:49) [GET]
+  [4;36;1mBlog Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: blogs: SELECT * FROM "blogs" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: blogs: SELECT * FROM "blogs" ):
+  app/controllers/blogs_controller.rb:7:in `index'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (54.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "post" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (54.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100106222705')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("blogs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("food_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("grocery_lists")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("in_place_editors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pagination_items")[0m
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:29:01) [GET]
+  [4;35;1mBlog Load (0.4ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:29:03) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2010-01-06 14:29:39) [POST]
+  Parameters: {"commit"=>"Create", "blog"=>{"post"=>"post for title 1", "title"=>"title 1"}, "authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY="}
+  [4;36;1mBlog Create (15.8ms)[0m   [0;1mINSERT INTO "blogs" ("created_at", "title", "post", "updated_at") VALUES('2010-01-06 22:29:39', 'title 1', 'post for title 1', '2010-01-06 22:29:39')[0m
+Redirected to http://0.0.0.0:3000/blogs/1
+Completed in 85ms (DB: 16) | 302 Found [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-06 14:29:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBlog Load (0.1ms)[0m   [0mSELECT * FROM "blogs" WHERE ("blogs"."id" = 1) [0m
+Rendering template within layouts/blogs
+Rendering blogs/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/blogs/1]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:29:41) [GET]
+  [4;36;1mBlog Load (0.4ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:29:43) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2010-01-06 14:29:52) [POST]
+  Parameters: {"commit"=>"Create", "blog"=>{"post"=>"post for title 2", "title"=>"title 2"}, "authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY="}
+  [4;35;1mBlog Create (0.6ms)[0m   [0mINSERT INTO "blogs" ("created_at", "title", "post", "updated_at") VALUES('2010-01-06 22:29:52', 'title 2', 'post for title 2', '2010-01-06 22:29:52')[0m
+Redirected to http://0.0.0.0:3000/blogs/2
+Completed in 49ms (DB: 1) | 302 Found [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-06 14:29:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBlog Load (0.2ms)[0m   [0;1mSELECT * FROM "blogs" WHERE ("blogs"."id" = 2) [0m
+Rendering template within layouts/blogs
+Rendering blogs/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/blogs/2]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:29:53) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:34:11) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+
+ActionView::TemplateError (undefined method `text_field_with_auto_complete' for #<ActionView::Helpers::FormBuilder:0x1041c6560>) on line #8 of app/views/blogs/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :title %><br />
+8:     <%= f.text_field_with_auto_complete :title %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :post %><br />
+
+    app/views/blogs/new.html.erb:8
+    app/views/blogs/new.html.erb:3
+    app/controllers/blogs_controller.rb:34:in `new'
+
+Rendered rescues/_trace (87.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:34:41) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:34:43) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (83.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:35:30) [GET]
+  [4;36;1mBlog Load (0.4ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:35:31) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:35:34) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (27.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:37:00) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:37:02) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:37:04) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+
+ActionController::UnknownAction (No action responded to auto_complete_for_blog_title. Actions: auto_complete_for_post_title, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:39:52) [GET]
+  [4;36;1mBlog Load (0.4ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:39:53) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:39:55) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+
+ActionController::UnknownAction (No action responded to auto_complete_for_blog_title. Actions: auto_complete_for_post_title, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:40:15) [GET]
+  [4;35;1mBlog Load (0.4ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:40:17) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:40:19) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+
+ActionController::UnknownAction (No action responded to auto_complete_for_blog_title. Actions: auto_complete_for_post_title, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:43:24) [GET]
+  [4;36;1mBlog Load (0.4ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:43:26) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:43:28) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%t%') ORDER BY title ASC LIMIT 10[0m
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:43:34) [POST]
+  Parameters: {"blog"=>{"title"=>"title 3"}, "_"=>""}
+  [4;36;1mBlog Load (0.4ms)[0m   [0;1mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%title 3%') ORDER BY title ASC LIMIT 10[0m
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2010-01-06 14:43:43) [POST]
+  Parameters: {"commit"=>"Create", "blog"=>{"post"=>"post for title 3", "title"=>"title 3"}, "authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY="}
+  [4;35;1mBlog Create (0.6ms)[0m   [0mINSERT INTO "blogs" ("created_at", "title", "post", "updated_at") VALUES('2010-01-06 22:43:43', 'title 3', 'post for title 3', '2010-01-06 22:43:43')[0m
+Redirected to http://0.0.0.0:3000/blogs/3
+Completed in 59ms (DB: 1) | 302 Found [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-06 14:43:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBlog Load (0.1ms)[0m   [0;1mSELECT * FROM "blogs" WHERE ("blogs"."id" = 3) [0m
+Rendering template within layouts/blogs
+Rendering blogs/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/blogs/3]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:43:55) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:43:57) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:44:01) [POST]
+  Parameters: {"blog"=>{"title"=>"Another Title"}, "_"=>""}
+  [4;36;1mBlog Load (0.4ms)[0m   [0;1mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%another title%') ORDER BY title ASC LIMIT 10[0m
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2010-01-06 14:44:10) [POST]
+  Parameters: {"commit"=>"Create", "blog"=>{"post"=>"Another title post 1", "title"=>"Another Title"}, "authenticity_token"=>"zE9L4X2Z4bX3QLDb4G/wHvEr4y647inNNBEc7gXOdaY="}
+  [4;35;1mBlog Create (0.3ms)[0m   [0mINSERT INTO "blogs" ("created_at", "title", "post", "updated_at") VALUES('2010-01-06 22:44:10', 'Another Title', 'Another title post 1', '2010-01-06 22:44:10')[0m
+Redirected to http://0.0.0.0:3000/blogs/4
+Completed in 96ms (DB: 0) | 302 Found [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-06 14:44:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mBlog Load (0.1ms)[0m   [0;1mSELECT * FROM "blogs" WHERE ("blogs"."id" = 4) [0m
+Rendering template within layouts/blogs
+Rendering blogs/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/blogs/4]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:44:12) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 14:44:25) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:44:28) [POST]
+  Parameters: {"blog"=>{"title"=>"a"}, "_"=>""}
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%a%') ORDER BY title ASC LIMIT 10[0m
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 14:44:35) [POST]
+  Parameters: {"blog"=>{"title"=>"tit"}, "_"=>""}
+  [4;35;1mBlog Load (0.6ms)[0m   [0mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%tit%') ORDER BY title ASC LIMIT 10[0m
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 14:44:44) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-06 20:56:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mBlog Load (0.7ms)[0m   [0mSELECT * FROM "blogs" WHERE ("blogs"."id" = 4) [0m
+Rendering template within layouts/blogs
+Rendering blogs/show
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/blogs/4]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 20:57:00) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:57:02) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-06 20:57:04) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+  [4;35;1mBlog Load (0.6ms)[0m   [0mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%t%') ORDER BY title ASC LIMIT 10[0m
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 20:58:08) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:58:12) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 57ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:58:30) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-06 20:59:14) [GET]
+Rendering template within layouts/blogs
+Rendering blogs/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/blogs/new]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 20:59:39) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-06 21:00:09) [GET]
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/blogs
+Rendering blogs/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/blogs]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-06 21:00:11) [GET]
+Rendering samples/index
+Completed in 62ms (View: 61, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-07 10:23:42) [GET]
+  [4;35;1mGroceryList Load (18.4ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 123ms (View: 67, DB: 18) | 200 OK [http://0.0.0.0/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-07 10:23:44) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 4) [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/show
+  [4;35;1mFoodItem Load (1.4ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 4) ORDER BY position[0m
+Completed in 73ms (View: 67, DB: 2) | 200 OK [http://0.0.0.0/grocery_lists/4]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-07 10:23:47) [GET]
+Rendering samples/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-07 10:23:49) [GET]
+  [4;36;1mGroceryList Load (0.4ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/grocery_lists
+Rendering grocery_lists/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
