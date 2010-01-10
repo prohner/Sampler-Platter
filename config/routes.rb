@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tag_users
+
   map.resources :blogs
 
   map.resources :grocery_lists

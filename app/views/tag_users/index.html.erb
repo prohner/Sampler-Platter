@@ -1,0 +1,24 @@
+<h1>Listing tag_users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Skills</th>
+    <th>Interests</th>
+  </tr>
+
+<% @tag_users.each do |tag_user| %>
+  <tr>
+    <td><%=h tag_user.name %></td>
+    <td><%=h tag_user.skills %></td>
+    <td><%=h tag_user.interests %></td>
+    <td><%= link_to 'Show', tag_user %></td>
+    <td><%= link_to 'Edit', edit_tag_user_path(tag_user) %></td>
+    <td><%= link_to 'Destroy', tag_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tag_user', new_tag_user_path %>

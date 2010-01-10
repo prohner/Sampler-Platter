@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @tag_user.name %>
+</p>
+
+<p>
+  <b>Skills:</b>
+  <%=h @tag_user.skills %>
+</p>
+
+<p>
+  <b>Interests:</b>
+  <%=h @tag_user.interests %>
+</p>
+
+
+<%= link_to 'Edit', edit_tag_user_path(@tag_user) %> |
+<%= link_to 'Back', tag_users_path %>
