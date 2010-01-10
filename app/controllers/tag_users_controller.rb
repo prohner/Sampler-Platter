@@ -1,5 +1,7 @@
 class TagUsersController < ApplicationController
   ## http://github.com/mbleigh/acts-as-taggable-on
+
+  before_filter :tag_cloud
   
   # GET /tag_users
   # GET /tag_users.xml
@@ -82,6 +84,16 @@ class TagUsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(tag_users_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  def tag_cloud  ##(tag_cloud, category_list)
+    @tags = TagUser.tag_counts_on(:skills)
+    logger.error("---------------------------------------------------")
+    logger.error(@tags)
+    logger.error("---------------------------------------------------")
+    @tags.each do |t|
+      logger.error("Tag = %s" % t)
     end
   end
 end

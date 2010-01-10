@@ -6142,3 +6142,326 @@ Migrating to AddTagUsers (20100110042548)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type_and_context')[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_tag_id')[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to ActsAsTaggableOnMigration (20100110041737)
+Migrating to CreateTagUsers (20100110042216)
+Migrating to AddTagUsers (20100110042548)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("blogs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("food_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("grocery_lists")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("in_place_editors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pagination_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tag_users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("taggings")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type_and_context')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tags")[0m
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:42:15) [GET]
+  [4;36;1mTagUser Load (0.6ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 31ms (View: 22, DB: 2) | 200 OK [http://0.0.0.0/tag_users]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:46:32) [GET]
+  [4;35;1mTagUser Load (0.6ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #24 of app/views/tag_users/index.html.erb:
+21: 
+22: <hr size=1 />
+23: 
+24: <% tag_cloud(@tags, %w(css1, css2, css3, css4)) do |tag, css_class| %>
+25: 	<%= link_to tag.name, { :actin => :tag, :id => tag.name}, :class => css_class %>
+26: <% end %>
+27: 
+
+    app/views/tag_users/index.html.erb:24
+    app/controllers/tag_users_controller.rb:9:in `index'
+
+Rendered rescues/_trace (37.5ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:48:30) [GET]
+  [4;36;1mTagUser Load (0.6ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #24 of app/views/tag_users/index.html.erb:
+21: 
+22: <hr size=1 />
+23: 
+24: <% tag_cloud(@tags, %w(css1, css2, css3, css4)) do |tag, css_class| %>
+25: 	<%= link_to tag.name, { :actin => :tag, :id => tag.name}, :class => css_class %>
+26: <% end %>
+27: 
+
+    app/views/tag_users/index.html.erb:24
+    app/controllers/tag_users_controller.rb:9:in `index'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:50:39) [GET]
+  [4;35;1mTagUser Load (0.7ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #24 of app/views/tag_users/index.html.erb:
+21: 
+22: <hr size=1 />
+23: 
+24: <% tag_cloud(@tags, %w(css1, css2, css3, css4)) do |tag, css_class| %>
+25: 	<%= link_to tag.name, { :actin => :tag, :id => tag.name}, :class => css_class %>
+26: <% end %>
+27: 
+
+    app/views/tag_users/index.html.erb:24
+    app/controllers/tag_users_controller.rb:9:in `index'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:54:50) [GET]
+  [4;36;1mTagUser Load (0.5ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #24 of app/views/tag_users/index.html.erb:
+21: 
+22: <hr size=1 />
+23: 
+24: <% tag_cloud(@tags, %w(css1, css2, css3, css4)) do |tag, css_class| %>
+25: 	<%= link_to tag.name, { :actin => :tag, :id => tag.name}, :class => css_class %>
+26: <% end %>
+27: 
+
+    app/views/tag_users/index.html.erb:24
+    app/controllers/tag_users_controller.rb:9:in `index'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:56:50) [GET]
+  [4;35;1mTagUser Load (0.6ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #24 of app/views/tag_users/index.html.erb:
+21: 
+22: <hr size=1 />
+23: 
+24: <% tag_cloud(@tags, %w(css1, css2, css3, css4)) do |tag, css_class| %>
+25: 	<%= link_to tag.name, { :actin => :tag, :id => tag.name}, :class => css_class %>
+26: <% end %>
+27: 
+
+    app/views/tag_users/index.html.erb:24
+    app/controllers/tag_users_controller.rb:9:in `index'
+
+Rendered rescues/_trace (93.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:57:42) [GET]
+  [4;36;1mTagUser Load (0.5ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #24 of app/views/tag_users/index.html.erb:
+21: 
+22: <hr size=1 />
+23: 
+24: <% tag_cloud @tags, %w(css1, css2, css3, css4) do |tag, css_class| %>
+25: 	<%= link_to tag.name, { :actin => :tag, :id => tag.name}, :class => css_class %>
+26: <% end %>
+27: 
+
+    app/views/tag_users/index.html.erb:24
+    app/controllers/tag_users_controller.rb:9:in `index'
+
+Rendered rescues/_trace (93.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:58:46) [GET]
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+---------------------------------------------------
+karatejokingrunningskatingwritingfootball
+---------------------------------------------------
+Tag = karate
+Tag = joking
+Tag = running
+Tag = skating
+Tag = writing
+Tag = football
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 19ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:59:02) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+---------------------------------------------------
+karatejokingrunningskatingwritingfootball
+---------------------------------------------------
+Tag = karate
+Tag = joking
+Tag = running
+Tag = skating
+Tag = writing
+Tag = football
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:59:04) [GET]
+  Parameters: {"id"=>"running", "actin"=>"tag"}
+  [4;35;1mTag Load (0.8ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+---------------------------------------------------
+karatejokingrunningskatingwritingfootball
+---------------------------------------------------
+Tag = karate
+Tag = joking
+Tag = running
+Tag = skating
+Tag = writing
+Tag = football
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 70ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/running?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 20:59:32) [GET]
+  Parameters: {"id"=>"running", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+---------------------------------------------------
+karatejokingrunningskatingwritingfootball
+---------------------------------------------------
+Tag = karate
+Tag = joking
+Tag = running
+Tag = skating
+Tag = writing
+Tag = football
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/running?actin=tag]
