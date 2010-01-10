@@ -1,4 +1,6 @@
 class TagUsersController < ApplicationController
+  ## http://github.com/mbleigh/acts-as-taggable-on
+  
   # GET /tag_users
   # GET /tag_users.xml
   def index

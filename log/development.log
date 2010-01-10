@@ -5845,3 +5845,300 @@ Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-07 10:23:49) [
 Rendering template within layouts/grocery_lists
 Rendering grocery_lists/index
 Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/grocery_lists]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to CreateTagUsers (20100110042216)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "tag_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "skills" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100110042216')[0m
+Migrating to AddTagUsers (20100110042548)
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to CreateTagUsers (20100110042216)
+Migrating to AddTagUsers (20100110042548)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mTagUser Delete all (0.3ms)[0m   [0mDELETE FROM "tag_users" WHERE 1=1[0m
+  [4;36;1mTagUser Create (0.2ms)[0m   [0;1mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES('Preston', '2010-01-10 04:34:28', '2010-01-10 04:34:28', NULL, NULL)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to CreateTagUsers (20100110042216)
+Migrating to AddTagUsers (20100110042548)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mTagUser Delete all (0.3ms)[0m   [0mDELETE FROM "tag_users" WHERE 1=1[0m
+  [4;36;1mTagUser Create (0.2ms)[0m   [0;1mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES('Preston', '2010-01-10 04:34:57', '2010-01-10 04:34:57', NULL, NULL)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (38.3ms)[0m   [0;1mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "post" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "food_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "grocery_list_id" integer, "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "grocery_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mCREATE TABLE "in_place_editors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE "pagination_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(30), "quantity" integer DEFAULT 0 NOT NULL, "price" integer DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106222705')[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100105054931')[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100105055023')[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100106033756')[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106035440')[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100106141028')[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106160032')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to CreateTagUsers (20100110042216)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "tag_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "skills" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100110042216')[0m
+Migrating to AddTagUsers (20100110042548)
+  [4;35;1mTagUser Delete all (0.5ms)[0m   [0mDELETE FROM "tag_users" WHERE 1=1[0m
+  [4;36;1mTagUser Create (0.2ms)[0m   [0;1mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES('Preston', '2010-01-10 04:35:34', '2010-01-10 04:35:34', NULL, NULL)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "post" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "food_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "grocery_list_id" integer, "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCREATE TABLE "grocery_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE "in_place_editors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE "pagination_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(30), "quantity" integer DEFAULT 0 NOT NULL, "price" integer DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106222705')[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100105054931')[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100105055023')[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100106033756')[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106035440')[0m
+  [4;35;1mSQL (4.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100106141028')[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100106160032')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to ActsAsTaggableOnMigration (20100110041737)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "tagger_id" integer, "tagger_type" varchar(255), "taggable_type" varchar(255), "context" varchar(255), "created_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings" ("taggable_id", "taggable_type", "context")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100110041737')[0m
+Migrating to CreateTagUsers (20100110042216)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "tag_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "skills" varchar(255), "tags" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100110042216')[0m
+Migrating to AddTagUsers (20100110042548)
+  [4;36;1mTagUser Delete all (0.3ms)[0m   [0;1mDELETE FROM "tag_users" WHERE 1=1[0m
+  [4;35;1mTagUser Create (0.2ms)[0m   [0mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES('Preston', '2010-01-10 04:38:39', '2010-01-10 04:38:39', NULL, NULL)[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'tags')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'tags')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'awesome') LIMIT 1[0m
+  [4;35;1mTag Exists (0.1ms)[0m   [0mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'awesome') LIMIT 1[0m
+  [4;36;1mTag Create (0.1ms)[0m   [0;1mINSERT INTO "tags" ("name") VALUES('awesome')[0m
+  [4;35;1mTagging Exists (0.2ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 1 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;36;1mTagging Create (0.2ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 1, 1, 'tags', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'slick') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'slick') LIMIT 1[0m
+  [4;35;1mTag Create (0.1ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('slick')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 2 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 1 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 2, 1, 'tags', NULL, 'TagUser')[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'hefty') LIMIT 1[0m
+  [4;35;1mTag Exists (0.1ms)[0m   [0mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'hefty') LIMIT 1[0m
+  [4;36;1mTag Create (0.0ms)[0m   [0;1mINSERT INTO "tags" ("name") VALUES('hefty')[0m
+  [4;35;1mTagging Exists (0.1ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 3 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 1 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;36;1mTagging Create (0.1ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 3, 1, 'tags', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'karate') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'karate') LIMIT 1[0m
+  [4;35;1mTag Create (0.1ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('karate')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 4 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 1 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 4, 1, 'skills', NULL, 'TagUser')[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') LIMIT 1[0m
+  [4;35;1mTag Exists (0.0ms)[0m   [0mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'joking') LIMIT 1[0m
+  [4;36;1mTag Create (0.0ms)[0m   [0;1mINSERT INTO "tags" ("name") VALUES('joking')[0m
+  [4;35;1mTagging Exists (0.1ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 1 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;36;1mTagging Create (0.1ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 5, 1, 'skills', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'running') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'running') LIMIT 1[0m
+  [4;35;1mTag Create (0.0ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('running')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 6 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 1 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 6, 1, 'skills', NULL, 'TagUser')[0m
+  [4;36;1mTagUser Create (0.1ms)[0m   [0;1mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES('Lexi', '2010-01-10 04:38:39', '2010-01-10 04:38:39', NULL, NULL)[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'tags')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'tags')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'funny') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'funny') LIMIT 1[0m
+  [4;35;1mTag Create (0.0ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('funny')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 7 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 2 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 7, 2, 'tags', NULL, 'TagUser')[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'wife') LIMIT 1[0m
+  [4;35;1mTag Exists (0.1ms)[0m   [0mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'wife') LIMIT 1[0m
+  [4;36;1mTag Create (0.0ms)[0m   [0;1mINSERT INTO "tags" ("name") VALUES('wife')[0m
+  [4;35;1mTagging Exists (0.1ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 8 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 2 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;36;1mTagging Create (0.1ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 8, 2, 'tags', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'skating') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'skating') LIMIT 1[0m
+  [4;35;1mTag Create (0.0ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('skating')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 9 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 2 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 9, 2, 'skills', NULL, 'TagUser')[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') LIMIT 1[0m
+  [4;35;1mTagging Exists (0.2ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 2 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;36;1mTagging Create (0.1ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 5, 2, 'skills', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'writing') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'writing') LIMIT 1[0m
+  [4;35;1mTag Create (0.0ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('writing')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 10 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 2 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 10, 2, 'skills', NULL, 'TagUser')[0m
+  [4;36;1mTagUser Create (0.1ms)[0m   [0;1mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES('Sam', '2010-01-10 04:38:39', '2010-01-10 04:38:39', NULL, NULL)[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'tags')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'tags')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'funny') LIMIT 1[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 7 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 3 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 7, 3, 'tags', NULL, 'TagUser')[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'son') LIMIT 1[0m
+  [4;35;1mTag Exists (0.0ms)[0m   [0mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'son') LIMIT 1[0m
+  [4;36;1mTag Create (0.0ms)[0m   [0;1mINSERT INTO "tags" ("name") VALUES('son')[0m
+  [4;35;1mTagging Exists (0.1ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 11 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 3 AND "taggings".context = 'tags') LIMIT 1[0m
+  [4;36;1mTagging Create (0.1ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 11, 3, 'tags', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'football') LIMIT 1[0m
+  [4;36;1mTag Exists (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = 'football') LIMIT 1[0m
+  [4;35;1mTag Create (0.0ms)[0m   [0mINSERT INTO "tags" ("name") VALUES('football')[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 12 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 3 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 12, 3, 'skills', NULL, 'TagUser')[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') LIMIT 1[0m
+  [4;35;1mTagging Exists (0.1ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 3 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;36;1mTagging Create (0.1ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 5, 3, 'skills', NULL, 'TagUser')[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'writing') LIMIT 1[0m
+  [4;36;1mTagging Exists (0.1ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 10 AND "taggings".taggable_type = 'TagUser' AND "taggings".taggable_id = 3 AND "taggings".context = 'skills') LIMIT 1[0m
+  [4;35;1mTagging Create (0.1ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-01-10 04:38:39', 10, 3, 'skills', NULL, 'TagUser')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100110042548')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("blogs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("food_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("grocery_lists")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("in_place_editors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pagination_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tag_users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("taggings")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type_and_context')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tags")[0m

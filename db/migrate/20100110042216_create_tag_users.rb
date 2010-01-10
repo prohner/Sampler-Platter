@@ -3,7 +3,7 @@ class CreateTagUsers < ActiveRecord::Migration
     create_table :tag_users do |t|
       t.string :name
       t.string :skills
-      t.string :interests
+      t.string :tags
 
       t.timestamps
     end
