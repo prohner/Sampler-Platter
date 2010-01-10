@@ -1,0 +1,36 @@
+<h1>Listing tag_users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Skills</th>
+    <th>Interests</th>
+  </tr>
+
+<% @tag_users.each do |tag_user| %>
+  <tr>
+    <td><%=h tag_user.name %></td>
+    <td><%=h tag_user.skills %></td>
+    <td><%=h tag_user.interests %></td>
+    <td><%= link_to 'Show', tag_user %></td>
+    <td><%= link_to 'Edit', edit_tag_user_path(tag_user) %></td>
+    <td><%= link_to 'Destroy', tag_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<hr size=1 />
+
+<div class="tag_cloud">
+<% tag_cloud @tags, %w(css1, css2, css3, css4) do |tag, css_class| %>
+	<%= link_to tag.name, { :action => :tag_users, :id => tag.name}, :class => css_class %>
+<% end %>
+</div>
+
+<hr size=1 />
+
+
+
+<br />
+
+<%= link_to 'New tag_user', new_tag_user_path %>
