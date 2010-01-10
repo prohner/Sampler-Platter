@@ -6465,3 +6465,1000 @@ Rendering tag_users/index
   [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
   [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
 Completed in 18ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/running?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:12:54) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+---------------------------------------------------
+karatejokingrunningskatingwritingfootball
+---------------------------------------------------
+Tag = karate
+Tag = joking
+Tag = running
+Tag = skating
+Tag = writing
+Tag = football
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:18:30) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.5ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:19:36) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:20:38) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 67ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:20:40) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `by_date' for #<Class:0x10356ff78>):
+  /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+  (__DELEGATION__):2:in `__send__'
+  (__DELEGATION__):2:in `with_scope'
+  app/controllers/tag_users_controller.rb:95:in `tag_users'
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:20:49) [GET]
+  Parameters: {"id"=>"running"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+
+ActionView::MissingTemplate (Missing template tag_users/tag_users.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:22:33) [GET]
+  Parameters: {"id"=>"running"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+
+ActionView::MissingTemplate (Missing template tag_users/__tag_users.html.erb in view path app/views):
+  app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:22:45) [GET]
+  Parameters: {"id"=>"running"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_running_855 ON tag_users_taggings_running_855.taggable_id = tag_users.id AND tag_users_taggings_running_855.taggable_type = 'TagUser' AND tag_users_taggings_running_855.tag_id = 6 [0m
+
+ActionView::TemplateError (undefined local variable or method `tag_user' for #<ActionView::Base:0x103440e18>) on line #1 of app/views/tag_users/_tag_users.html.erb:
+1: <%= h tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_users.html.erb:1
+    app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:23:04) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_users.html.erb:
+1: <%= h @tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_users.html.erb:1
+    app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendered rescues/_trace (92.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:29:42) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+Rendered tag_users/_tag_users (0.4ms)
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/running]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:30:08) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h @tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendered rescues/_trace (89.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:30:34) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendered rescues/_trace (95.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:32:02) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h @tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendered rescues/_trace (33.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:32:07) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:32:09) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h @tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/controllers/tag_users_controller.rb:96:in `tag_users'
+
+Rendered rescues/_trace (85.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:32:54) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_895 ON tag_users_taggings_joking_895.taggable_id = tag_users.id AND tag_users_taggings_joking_895.taggable_type = 'TagUser' AND tag_users_taggings_joking_895.tag_id = 5 [0m
+Preston
+Lexi
+Sam
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h @tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/controllers/tag_users_controller.rb:99:in `tag_users'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:33:16) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_412 ON tag_users_taggings_joking_412.taggable_id = tag_users.id AND tag_users_taggings_joking_412.taggable_type = 'TagUser' AND tag_users_taggings_joking_412.tag_id = 5 [0m
+Preston
+Lexi
+Sam
+Rendered tag_users/_tag_user (0.2ms)
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:36:01) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.3ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_76 ON tag_users_taggings_joking_76.taggable_id = tag_users.id AND tag_users_taggings_joking_76.taggable_type = 'TagUser' AND tag_users_taggings_joking_76.tag_id = 5 [0m
+Preston
+Lexi
+Sam
+Rendered tag_users/_tag_user (0.4ms)
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:36:07) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_414 ON tag_users_taggings_joking_414.taggable_id = tag_users.id AND tag_users_taggings_joking_414.taggable_type = 'TagUser' AND tag_users_taggings_joking_414.tag_id = 5 [0m
+Preston
+Lexi
+Sam
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/controllers/tag_users_controller.rb:99:in `tag_users'
+
+Rendered rescues/_trace (84.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:37:23) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_786 ON tag_users_taggings_joking_786.taggable_id = tag_users.id AND tag_users_taggings_joking_786.taggable_type = 'TagUser' AND tag_users_taggings_joking_786.tag_id = 5 [0m
+Preston
+Lexi
+Sam
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/views/tag_users/tag_users.html.erb:1
+
+Rendered rescues/_trace (94.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:38:25) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: <%= h @tag_user.name %>
+2: <br />
+
+    app/views/tag_users/_tag_user.html.erb:1
+    app/views/tag_users/tag_users.html.erb:1
+
+Rendered rescues/_trace (96.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:38:31) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.4ms)
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:39:54) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.3ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_565 ON tag_users_taggings_joking_565.taggable_id = tag_users.id AND tag_users_taggings_joking_565.taggable_type = 'TagUser' AND tag_users_taggings_joking_565.tag_id = 5 [0m
+#<TagUser:0x1034361e8>#<TagUser:0x103436120>#<TagUser:0x103436080>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:41:14) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_582 ON tag_users_taggings_joking_582.taggable_id = tag_users.id AND tag_users_taggings_joking_582.taggable_type = 'TagUser' AND tag_users_taggings_joking_582.tag_id = 5 [0m
+#<TagUser:0x1036b5db0>#<TagUser:0x1036b5ce8>#<TagUser:0x1036b5c48>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+ERROR: compiling _run_erb_app47views47tag_users47tag_users46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:1: syntax error, unexpected ')'
+...tag_users.each do |tag_user| ).to_s); @output_buffer.concat ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:2: syntax error, unexpected ')', expecting tASSOC
+...tag_user.html.erb", tag_user ).to_s); @output_buffer.concat ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:3: syntax error, unexpected kEND
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n"
+                             ^
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:5: syntax error, unexpected kENSURE, expecting kEND
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:7: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47tag_users47tag_users46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( @tag_users.each do |tag_user| ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( render :partial => "tag_user.html.erb", tag_user ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:7:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:1: syntax error, unexpected ')'
+...tag_users.each do |tag_user| ).to_s); @output_buffer.concat ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:2: syntax error, unexpected ')', expecting tASSOC
+...tag_user.html.erb", tag_user ).to_s); @output_buffer.concat ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:3: syntax error, unexpected kEND
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n"
+                             ^
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:5: syntax error, unexpected kENSURE, expecting kEND
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:7: syntax error, unexpected $end, expecting ')') on line #1 of app/views/tag_users/tag_users.html.erb:
+1: <%= @tag_users.each do |tag_user| %>
+2: 	<%= render :partial => "tag_user.html.erb", tag_user %>
+3: <%= end %>
+
+    app/views/tag_users/tag_users.html.erb:7:in `compile!'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:41:33) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_149 ON tag_users_taggings_joking_149.taggable_id = tag_users.id AND tag_users_taggings_joking_149.taggable_type = 'TagUser' AND tag_users_taggings_joking_149.tag_id = 5 [0m
+#<TagUser:0x10334b0d0>#<TagUser:0x10334b008>#<TagUser:0x10334af68>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+ERROR: compiling _run_erb_app47views47tag_users47tag_users46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:2: syntax error, unexpected ')', expecting tASSOC
+...tag_user.html.erb", tag_user ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47tag_users47tag_users46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  @tag_users.each do |tag_user| ; @output_buffer.concat "\n\t"
+; @output_buffer.concat(( render :partial => "tag_user.html.erb", tag_user ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:7:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:2: syntax error, unexpected ')', expecting tASSOC
+...tag_user.html.erb", tag_user ).to_s); @output_buffer.concat ...
+                              ^) on line #2 of app/views/tag_users/tag_users.html.erb:
+1: <% @tag_users.each do |tag_user| %>
+2: 	<%= render :partial => "tag_user.html.erb", tag_user %>
+3: <% end %>
+
+    app/views/tag_users/tag_users.html.erb:7:in `compile!'
+
+Rendered rescues/_trace (84.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:41:48) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_36 ON tag_users_taggings_joking_36.taggable_id = tag_users.id AND tag_users_taggings_joking_36.taggable_type = 'TagUser' AND tag_users_taggings_joking_36.tag_id = 5 [0m
+#<TagUser:0x10344af30>#<TagUser:0x10344ae68>#<TagUser:0x10344adc8>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+ERROR: compiling _run_erb_app47views47tag_users47tag_users46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:2: syntax error, unexpected ';', expecting tASSOC
+...tag_user.html.erb", tag_user ; @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47tag_users47tag_users46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  @tag_users.each do |tag_user| ; @output_buffer.concat "\n\t"
+;  render :partial => "tag_user.html.erb", tag_user ; @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:7:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/tag_users/tag_users.html.erb:2: syntax error, unexpected ';', expecting tASSOC
+...tag_user.html.erb", tag_user ; @output_buffer.concat "\n"
+                              ^) on line #2 of app/views/tag_users/tag_users.html.erb:
+1: <% @tag_users.each do |tag_user| %>
+2: 	<% render :partial => "tag_user.html.erb", tag_user %>
+3: <% end %>
+
+    app/views/tag_users/tag_users.html.erb:7:in `compile!'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:42:03) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.9ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_18 ON tag_users_taggings_joking_18.taggable_id = tag_users.id AND tag_users_taggings_joking_18.taggable_type = 'TagUser' AND tag_users_taggings_joking_18.tag_id = 5 [0m
+#<TagUser:0x103598a90>#<TagUser:0x1035989c8>#<TagUser:0x103598928>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:42:38) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_247 ON tag_users_taggings_joking_247.taggable_id = tag_users.id AND tag_users_taggings_joking_247.taggable_type = 'TagUser' AND tag_users_taggings_joking_247.tag_id = 5 [0m
+#<TagUser:0x103457f78>#<TagUser:0x103457eb0>#<TagUser:0x103457e10>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.4ms)
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:43:05) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_1017 ON tag_users_taggings_joking_1017.taggable_id = tag_users.id AND tag_users_taggings_joking_1017.taggable_type = 'TagUser' AND tag_users_taggings_joking_1017.tag_id = 5 [0m
+#<TagUser:0x1036adfc0>#<TagUser:0x1036adef8>#<TagUser:0x1036ade58>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 65ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:43:22) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_178 ON tag_users_taggings_joking_178.taggable_id = tag_users.id AND tag_users_taggings_joking_178.taggable_type = 'TagUser' AND tag_users_taggings_joking_178.tag_id = 5 [0m
+#<TagUser:0x10354d860>#<TagUser:0x10354d798>#<TagUser:0x10354d6f8>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:43:40) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_796 ON tag_users_taggings_joking_796.taggable_id = tag_users.id AND tag_users_taggings_joking_796.taggable_type = 'TagUser' AND tag_users_taggings_joking_796.tag_id = 5 [0m
+#<TagUser:0x103420af0>#<TagUser:0x103420a28>#<TagUser:0x103420988>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `skills' for #<Class:0x103455bd8>) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: In the list <%= h @tag_users.skills %>
+2: <br />
+
+    /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    app/views/tag_users/_tag_user.html.erb:1
+    app/views/tag_users/tag_users.html.erb:3
+    (__DELEGATION__):2:in `each'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `each'
+    app/views/tag_users/tag_users.html.erb:2
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:44:02) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.3ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_761 ON tag_users_taggings_joking_761.taggable_id = tag_users.id AND tag_users_taggings_joking_761.taggable_type = 'TagUser' AND tag_users_taggings_joking_761.tag_id = 5 [0m
+#<TagUser:0x1032b6fe8>#<TagUser:0x1032b6f20>#<TagUser:0x1032b6e80>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `tags' for #<Class:0x1032e73c8>) on line #1 of app/views/tag_users/_tag_user.html.erb:
+1: In the list <%= h @tag_users.tags %>
+2: <br />
+
+    /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    app/views/tag_users/_tag_user.html.erb:1
+    app/views/tag_users/tag_users.html.erb:3
+    (__DELEGATION__):2:in `each'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `each'
+    app/views/tag_users/tag_users.html.erb:2
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:44:13) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_822 ON tag_users_taggings_joking_822.taggable_id = tag_users.id AND tag_users_taggings_joking_822.taggable_type = 'TagUser' AND tag_users_taggings_joking_822.tag_id = 5 [0m
+#<TagUser:0x1033091d0>#<TagUser:0x103309108>#<TagUser:0x103309068>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'tags'))) [0m
+Rendered tag_users/_tag_user (1.4ms)
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'tags'))) [0m
+Rendered tag_users/_tag_user (0.7ms)
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'tags'))) [0m
+Rendered tag_users/_tag_user (0.7ms)
+Completed in 17ms (View: 5, DB: 2) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:44:24) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_847 ON tag_users_taggings_joking_847.taggable_id = tag_users.id AND tag_users_taggings_joking_847.taggable_type = 'TagUser' AND tag_users_taggings_joking_847.tag_id = 5 [0m
+#<TagUser:0x1035e9e18>#<TagUser:0x1035e9d50>#<TagUser:0x1035e9cb0>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.3ms)
+Rendered tag_users/_tag_user (0.0ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:45:17) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_846 ON tag_users_taggings_joking_846.taggable_id = tag_users.id AND tag_users_taggings_joking_846.taggable_type = 'TagUser' AND tag_users_taggings_joking_846.tag_id = 5 [0m
+#<TagUser:0x1034bb960>#<TagUser:0x1034bb898>#<TagUser:0x1034bb7f8>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.0ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:45:26) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_383 ON tag_users_taggings_joking_383.taggable_id = tag_users.id AND tag_users_taggings_joking_383.taggable_type = 'TagUser' AND tag_users_taggings_joking_383.tag_id = 5 [0m
+#<TagUser:0x1036d4d28>#<TagUser:0x1036d4b20>#<TagUser:0x1036d4a80>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.3ms)
+Rendered tag_users/_tag_user (0.0ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 61ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:45:29) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.3ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:45:32) [GET]
+  Parameters: {"id"=>"skating"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'skating') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_skating_942 ON tag_users_taggings_skating_942.taggable_id = tag_users.id AND tag_users_taggings_skating_942.taggable_type = 'TagUser' AND tag_users_taggings_skating_942.tag_id = 9 [0m
+#<TagUser:0x10341e598>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/skating]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:45:35) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:45:38) [GET]
+  Parameters: {"id"=>"karate"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'karate') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_karate_898 ON tag_users_taggings_karate_898.taggable_id = tag_users.id AND tag_users_taggings_karate_898.taggable_type = 'TagUser' AND tag_users_taggings_karate_898.tag_id = 4 [0m
+#<TagUser:0x103542780>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/karate]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:45:40) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:45:42) [GET]
+  Parameters: {"id"=>"football"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'football') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_football_177 ON tag_users_taggings_football_177.taggable_id = tag_users.id AND tag_users_taggings_football_177.taggable_type = 'TagUser' AND tag_users_taggings_football_177.tag_id = 12 [0m
+#<TagUser:0x1036b6f08>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 61ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/football]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:45:44) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]

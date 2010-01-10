@@ -89,11 +89,10 @@ class TagUsersController < ApplicationController
   
   def tag_cloud  ##(tag_cloud, category_list)
     @tags = TagUser.tag_counts_on(:skills)
-    logger.error("---------------------------------------------------")
-    logger.error(@tags)
-    logger.error("---------------------------------------------------")
-    @tags.each do |t|
-      logger.error("Tag = %s" % t)
-    end
+  end
+
+  def tag_users
+    @tag_users = TagUser.tagged_with(params[:id])##.by_date
+    logger.error(@tag_users)
   end
 end
