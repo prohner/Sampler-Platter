@@ -1,6 +1,10 @@
 <h2>List of Users with <%= params[:id] %></h2>
 <ul>
 <% @tag_users.each do |tag_user| %>
-	<%= render :partial => "tag_user.html.erb", :object => tag_user %>
+<li><%= tag_user.name %></li>
 <% end %>
+
+<%= render :partial => "tag_user.html.erb", :collection => @tag_users %>
+
 </ul>
+
