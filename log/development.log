@@ -7462,3 +7462,212 @@ Rendering tag_users/index
   [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
   [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
 Completed in 18ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:50:44) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:50:46) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_117 ON tag_users_taggings_joking_117.taggable_id = tag_users.id AND tag_users_taggings_joking_117.taggable_type = 'TagUser' AND tag_users_taggings_joking_117.tag_id = 5 [0m
+#<TagUser:0x103696640>#<TagUser:0x103696578>#<TagUser:0x1036964d8>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.2ms)
+Rendered tag_users/_tag_user (0.0ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:51:37) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_631 ON tag_users_taggings_joking_631.taggable_id = tag_users.id AND tag_users_taggings_joking_631.taggable_type = 'TagUser' AND tag_users_taggings_joking_631.tag_id = 5 [0m
+#<TagUser:0x1035492b0>#<TagUser:0x1035491e8>#<TagUser:0x103549148>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.0ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:51:39) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:51:40) [GET]
+  Parameters: {"id"=>"joking"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'joking') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_joking_897 ON tag_users_taggings_joking_897.taggable_id = tag_users.id AND tag_users_taggings_joking_897.taggable_type = 'TagUser' AND tag_users_taggings_joking_897.tag_id = 5 [0m
+#<TagUser:0x1035e1b00>#<TagUser:0x1035e1a38>#<TagUser:0x1035e1998>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Rendered tag_users/_tag_user (0.0ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/joking]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:51:42) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:51:43) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_running_798 ON tag_users_taggings_running_798.taggable_id = tag_users.id AND tag_users_taggings_running_798.taggable_type = 'TagUser' AND tag_users_taggings_running_798.tag_id = 6 [0m
+#<TagUser:0x1033b1178>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/running]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:51:45) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:51:47) [GET]
+  Parameters: {"id"=>"football"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'football') [0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_football_838 ON tag_users_taggings_football_838.taggable_id = tag_users.id AND tag_users_taggings_football_838.taggable_type = 'TagUser' AND tag_users_taggings_football_838.tag_id = 12 [0m
+#<TagUser:0x1034db418>
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+Rendered tag_users/_tag_user (0.1ms)
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/football]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:51:51) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:52:59) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:53:04) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_running_482 ON tag_users_taggings_running_482.taggable_id = tag_users.id AND tag_users_taggings_running_482.taggable_type = 'TagUser' AND tag_users_taggings_running_482.tag_id = 6 [0m
+Rendered tag_users/_tag_user (1.6ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/running]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:53:06) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 64ms (View: 55, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-09 21:53:11) [GET]
+  Parameters: {"id"=>"writing"}
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'writing') [0m
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_writing_320 ON tag_users_taggings_writing_320.taggable_id = tag_users.id AND tag_users_taggings_writing_320.taggable_type = 'TagUser' AND tag_users_taggings_writing_320.tag_id = 10 [0m
+Rendered tag_users/_tag_user (1.4ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/tag_users/tag_users/writing]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-09 21:53:13) [GET]
+  Parameters: {"id"=>"joking", "actin"=>"tag"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/tag_users/index/joking?actin=tag]

@@ -93,6 +93,5 @@ class TagUsersController < ApplicationController
 
   def tag_users
     @tag_users = TagUser.tagged_with(params[:id])##.by_date
-    logger.error(@tag_users)
   end
 end
