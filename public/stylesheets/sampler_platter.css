@@ -1,0 +1,14 @@
+.item_done {
+	text-decoration: line-through;
+}
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
+
+.tag_cloud {
+	width: 100px;
+	border: 1px solid black;
+	float: right;
+}
