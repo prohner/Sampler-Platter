@@ -44,7 +44,7 @@ class TagUsersController < ApplicationController
   # POST /tag_users
   # POST /tag_users.xml
   def create
-    @tag_user = TagUser.new(params[:tag_user])
+    @tag_user = move_user_attributes(TagUser.new, params)
 
     respond_to do |format|
       if @tag_user.save
@@ -64,7 +64,10 @@ class TagUsersController < ApplicationController
     @tag_user = TagUser.find(params[:id])
 
     respond_to do |format|
-      if @tag_user.update_attributes(params[:tag_user])
+      logger.error("Assigning %s, %s, %s, %s" % [params[:id], params[:name], params[:interests], params[:skills]])
+      @tag_user = move_user_attributes(@tag_user, params)
+      
+      if @tag_user.save
         flash[:notice] = 'TagUser was successfully updated.'
         format.html { redirect_to(@tag_user) }
         format.xml  { head :ok }
@@ -93,5 +96,14 @@ class TagUsersController < ApplicationController
 
   def tag_users
     @tag_users = TagUser.tagged_with(params[:id])##.by_date
+  end
+  
+private
+  def move_user_attributes(the_user, params)
+    the_user.name = params[:name]
+    the_user.interest_list = params[:interests]
+    the_user.skill_list = params[:skills]
+    logger.error("Assigning %s, %s, %s" % [params[:name], params[:interests], params[:skills]])
+    the_user
   end
 end
