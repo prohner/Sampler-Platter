@@ -1,4 +1,14 @@
 <h1>InPlaceEditor#new</h1>
 <p>Find me in app/views/in_place_editor/new.html.erb</p>
 
-<%= in_place_editor_field :in_place_editor, 'name' %>
+<% form_for :in_place_editor, @in_place_editor, :url => { :action => "create" } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

@@ -8,9 +8,26 @@ class InPlaceEditorController < ApplicationController
   
   def new
     @in_place_editor = InPlaceEditor.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @in_place_editor }
+    end
   end
 
   def create
+    @in_place_editor = InPlaceEditor.new(params[:in_place_editor])
+
+    respond_to do |format|
+      if @in_place_editor.save
+        flash[:notice] = 'InPlaceEditor was successfully created.'
+        format.html { redirect_to(:action => "index") }
+        format.xml  { render :xml => @in_place_editor, :status => :created, :location => @in_place_editor }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @in_place_editor.errors, :status => :unprocessable_entity }
+      end
+    end
   end
   
   def xxset_in_place_editor_name
@@ -28,4 +45,13 @@ class InPlaceEditorController < ApplicationController
     @in_place_editors = InPlaceEditor.all
   end
 
+  def destroy
+    @in_place_editor = InPlaceEditor.find(params[:id])
+    @in_place_editor.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(:action => "index") }
+      format.xml  { head :ok }
+    end
+  end
 end

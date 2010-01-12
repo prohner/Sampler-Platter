@@ -13,7 +13,8 @@
 	</td>
 
     <td><%= link_to 'Show', :action => 'show', :id => in_place_editor.id %></td>
-    <td><!--%= link_to 'Destroy', in_place_editor, :confirm => 'Are you sure?', :method => :delete %--></td>
+    <td><%= link_to 'Destroy', :action => "destroy", :id => in_place_editor.id, :confirm => "Are you sure about this?" %></td>
+    <td><%= link_to 'Destroy Alt', in_place_editor_path(in_place_editor), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
