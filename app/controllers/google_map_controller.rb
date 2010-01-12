@@ -3,8 +3,11 @@ class GoogleMapController < ApplicationController
   
   def index
     @map = GMap.new("map")
-    @map.control_init(:large_map => true, :map_type => false)
+    @map.control_init(:large_map => true, :map_type => true)
     @map.center_zoom_init([41, -80], 10)
+    
+    ianazones = GMarker.new([41, -80])
+    @map.overlay_init(ianazones)
   end
 
 end
