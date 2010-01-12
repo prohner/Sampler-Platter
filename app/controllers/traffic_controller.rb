@@ -11,4 +11,44 @@ class TrafficController < ApplicationController
     
   end
 
+  def find
+    begin
+      results = Traffic.get(:location => @params[:address])
+      unless results.empty?
+        @map = Variable.new("map")
+        icon_incident = Variable.new("icon_incident")
+        icon_construction = Variable.new("icon_construction")
+        @traffic_markers = []
+        results.each do |result|
+          icon = result.type == "construction" ? icon_construction : icon_incident
+          marker = GMarker.new(result.latlon, :icon => icon, :info_window => info_window_from_result(result), :title => result.title)
+          @traffic_markers << marker
+        end
+        @center = GLatLng.new(bounding_box_center(@traffic_markers))
+      else
+        @message = "No traffic informatin found for #{@params[:address]}"
+      end
+    rescue Exception => exception
+      @message = "Service temporarily unavailable."
+    end
+  end
+  
+private
+  def bounding_box_center(markers)
+    maxlat, maxlng, minlat, minlng = -Float::MAX, -Float::MAX, Float::MAX, Float::MAX
+    markers.each do |marker|
+      coord = marker.point
+      maxlat = coord.lat if coord.lat > maxlat
+      minlat = coord.lat if coord.lat < minlat
+      maxlng = coord.lng if coord.lng > maxlng
+      minlng = coord.lng if coord.lng < minlng
+    end
+    return [(maxlat + minlat)/2,(maxlng + minlng)/2]
+  end
+  
+  def info_window_from_result(result)
+      return "<div style=\"font-size: 14px;width:200px;background-color:#D2F9F8; \"><strong>#{result.title}</strong></div>
+    <div style=\"font-size: 10px;width:200px;background-color:#E9FFFE;\"><div><strong>Severity:</strong> #{result.severity}</div>
+    <div><strong>Description:</strong>#{result.description}</div><div><strong>End:</strong>#{result.end_date}</div></div>"
+  end
 end

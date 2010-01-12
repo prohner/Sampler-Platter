@@ -8844,3 +8844,51 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:12:12) [GET]
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/traffic_controller.rb:37: syntax error, unexpected '-', expecting '\n' or ';'
+  def bounding_box-center(markers)
+                   ^
+/Users/Preston Air/work/Sampler-Platter/app/controllers/traffic_controller.rb:54: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:12:21) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:12:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:12:35) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+
+ActionView::MissingTemplate (Missing template traffic/find.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:15:13) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 58ms (View: 57, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:15:31) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
