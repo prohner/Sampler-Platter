@@ -8892,3 +8892,33 @@ Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:15:31) [POST]
   Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
 Rendering traffic/find
 Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:16:55) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:17:17) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:21:09) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:27:30) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:28:05) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 826ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]

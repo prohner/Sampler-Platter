@@ -1,3 +1,11 @@
+## From Yahoo:
+  ## Congratulations, prestonmscnetcom, your application is now registered! Yeah!
+  ## Your application id is GhBNYNjIkY1XHuZ4d9AqAEwRNdKZLDf0IyOolQkZKrY-
+  ## Your shared secret is dd0c72158090b841c08a521b0095731a
+  ## For application entrypoint -> http://www.mscnet.com
+  ## https://developer.apps.yahoo.com/projects?
+
+
 require "ym4r/yahoo_maps/building_block/traffic"
 include Ym4r::YahooMaps::BuildingBlock
 
@@ -13,7 +21,12 @@ class TrafficController < ApplicationController
 
   def find
     begin
-      results = Traffic.get(:location => @params[:address])
+      #results = Traffic::get(:location => @params[:address])
+      results = Traffic.get(:street => "1 Infinite Loop",
+                             :city => "Cupertino",
+                             :state => "CA",
+                             :zip => "95014",
+                             :include_map => true)
       unless results.empty?
         @map = Variable.new("map")
         icon_incident = Variable.new("icon_incident")
@@ -29,7 +42,7 @@ class TrafficController < ApplicationController
         @message = "No traffic informatin found for #{@params[:address]}"
       end
     rescue Exception => exception
-      @message = "Service temporarily unavailable."
+      @message = "Service temporarily unavailable. (%s)" % exception.message
     end
   end
   
