@@ -100,10 +100,10 @@ class TagUsersController < ApplicationController
   
 private
   def move_user_attributes(the_user, params)
-    the_user.name = params[:name]
-    the_user.interest_list = params[:interests]
-    the_user.skill_list = params[:skills]
-    logger.error("Assigning %s, %s, %s" % [params[:name], params[:interests], params[:skills]])
+    the_user.name = params[:tag_user][:name]
+    the_user.interest_list = params[:tag_user][:interests]
+    the_user.skill_list = params[:tag_user][:skills]
+    logger.error("Assigning %s, %s, %s" % [params[:tag_user][:name], params[:tag_user][:interests], params[:tag_user][:skills]])
     the_user
   end
 end
