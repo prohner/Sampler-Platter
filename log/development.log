@@ -7743,3 +7743,147 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:20:07) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/google_maps" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:41) [GET]
+
+ActionController::RoutingError (No route matches "/google_maps" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:20:43) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:20:44) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:45) [GET]
+
+ActionController::RoutingError (No route matches "/google_map" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:29:28) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:29:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:29:32) [GET]
+
+ActionController::RoutingError (No route matches "/google_map" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:30:03) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:30:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:32:15) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:32:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:34:19) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:34:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:34:44) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 63ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:34:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
