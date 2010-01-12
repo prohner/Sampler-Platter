@@ -7887,3 +7887,642 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:06) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-11 16:38:10) [GET]
+  [4;36;1mInPlaceEditor Load (25.7ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/application
+Rendering in_place_editor/index
+Completed in 37ms (View: 8, DB: 26) | 200 OK [http://127.0.0.1/in_place_editor]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InPlaceEditorController#new (for 127.0.0.1 at 2010-01-11 16:38:11) [GET]
+Rendering template within layouts/application
+Rendering in_place_editor/new
+Completed in 63ms (View: 59, DB: 0) | 200 OK [http://127.0.0.1/in_place_editor/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:15) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-11 16:38:19) [GET]
+  [4;35;1mPaginationItem Load (0.9ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pagination/index
+Rendered pagination/_pagination_items (12.5ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/pagination]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:23) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-11 16:38:24) [GET]
+  [4;36;1mInPlaceEditor Load (0.4ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/application
+Rendering in_place_editor/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/in_place_editor]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing InPlaceEditorController#new (for 127.0.0.1 at 2010-01-11 16:38:25) [GET]
+Rendering template within layouts/application
+Rendering in_place_editor/new
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/in_place_editor/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:28) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-11 16:38:31) [GET]
+  [4;35;1mGroceryList Load (0.4ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/grocery_lists]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#new (for 127.0.0.1 at 2010-01-11 16:38:32) [GET]
+Rendering template within layouts/application
+Rendering grocery_lists/new
+Completed in 51ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/grocery_lists/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#create (for 127.0.0.1 at 2010-01-11 16:38:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "grocery_list"=>{"name"=>"New list"}}
+  [4;36;1mGroceryList Create (273.3ms)[0m   [0;1mINSERT INTO "grocery_lists" ("name", "created_at", "updated_at") VALUES('New list', '2010-01-12 00:38:37', '2010-01-12 00:38:37')[0m
+  [4;35;1mFoodItem Load (0.2ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 1', 1, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 2', 2, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 3', 3, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 4', 4, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 5', 5, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 6', 6, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.3ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 7', 7, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.2ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 8', 8, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 9', 9, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+  [4;35;1mFoodItem Load (0.3ms)[0m   [0mSELECT * FROM "food_items" WHERE (grocery_list_id = 1) ORDER BY position DESC LIMIT 1[0m
+  [4;36;1mFoodItem Create (0.2ms)[0m   [0;1mINSERT INTO "food_items" ("name", "position", "created_at", "updated_at", "grocery_list_id") VALUES('Item 10', 10, '2010-01-12 00:38:37', '2010-01-12 00:38:37', 1)[0m
+Redirected to http://127.0.0.1:3000/grocery_lists/1
+Completed in 707ms (DB: 278) | 302 Found [http://127.0.0.1/grocery_lists]
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-11 16:38:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering grocery_lists/show
+  [4;36;1mFoodItem Load (0.7ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 1) ORDER BY position[0m
+Completed in 67ms (View: 62, DB: 1) | 200 OK [http://127.0.0.1/grocery_lists/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-11 16:38:41) [POST]
+  Parameters: {"authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "id"=>"1", "my_list"=>["1", "2", "3", "8", "4", "5", "6", "7", "9", "10"], "_"=>""}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 1) [0m
+  [4;36;1mFoodItem Load (0.7ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 1) ORDER BY position[0m
+  [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:41', "position" = 5 WHERE "id" = 4[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:41', "position" = 6 WHERE "id" = 5[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:41', "position" = 7 WHERE "id" = 6[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:41', "position" = 8 WHERE "id" = 7[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:41', "position" = 4 WHERE "id" = 8[0m
+Completed in 79ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/grocery_lists/sort/1]
+
+
+Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-11 16:38:46) [POST]
+  Parameters: {"authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "id"=>"1", "my_list"=>["8", "1", "2", "3", "4", "5", "6", "7", "9", "10"], "_"=>""}
+  [4;36;1mGroceryList Load (0.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 1) [0m
+  [4;35;1mFoodItem Load (0.6ms)[0m   [0mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 1) ORDER BY position[0m
+  [4;36;1mFoodItem Update (0.3ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:46', "position" = 2 WHERE "id" = 1[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:46', "position" = 3 WHERE "id" = 2[0m
+  [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:46', "position" = 4 WHERE "id" = 3[0m
+  [4;35;1mFoodItem Update (0.2ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-12 00:38:46', "position" = 1 WHERE "id" = 8[0m
+Completed in 127ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/grocery_lists/sort/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:48) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-11 16:38:49) [GET]
+  [4;36;1mGroceryList Load (0.5ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/grocery_lists]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GroceryListsController#show (for 127.0.0.1 at 2010-01-11 16:38:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroceryList Load (0.1ms)[0m   [0mSELECT * FROM "grocery_lists" WHERE ("grocery_lists"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering grocery_lists/show
+  [4;36;1mFoodItem Load (0.7ms)[0m   [0;1mSELECT * FROM "food_items" WHERE ("food_items".grocery_list_id = 1) ORDER BY position[0m
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://127.0.0.1/grocery_lists/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:55) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:38:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-11 16:39:01) [GET]
+  [4;35;1mBlog Load (0.4ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 22ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/blogs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-11 16:39:02) [GET]
+Rendering template within layouts/application
+Rendering blogs/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/blogs/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-11 16:39:06) [POST]
+  Parameters: {"blog"=>{"title"=>"title one"}, "_"=>""}
+  [4;36;1mBlog Load (0.6ms)[0m   [0;1mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%title one%') ORDER BY title ASC LIMIT 10[0m
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/blogs/auto_complete_for_blog_title]
+
+
+Processing BlogsController#create (for 127.0.0.1 at 2010-01-11 16:39:10) [POST]
+  Parameters: {"commit"=>"Create", "blog"=>{"post"=>"whatever", "title"=>"title one"}, "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA="}
+  [4;35;1mBlog Create (0.3ms)[0m   [0mINSERT INTO "blogs" ("created_at", "title", "post", "updated_at") VALUES('2010-01-12 00:39:10', 'title one', 'whatever', '2010-01-12 00:39:10')[0m
+Redirected to http://127.0.0.1:3000/blogs/1
+Completed in 45ms (DB: 0) | 302 Found [http://127.0.0.1/blogs]
+
+
+Processing BlogsController#show (for 127.0.0.1 at 2010-01-11 16:39:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBlog Load (0.1ms)[0m   [0;1mSELECT * FROM "blogs" WHERE ("blogs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering blogs/show
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/blogs/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2010-01-11 16:39:13) [GET]
+  [4;35;1mBlog Load (0.5ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/blogs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#new (for 127.0.0.1 at 2010-01-11 16:39:14) [GET]
+Rendering template within layouts/application
+Rendering blogs/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/blogs/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogsController#auto_complete_for_blog_title (for 127.0.0.1 at 2010-01-11 16:39:16) [POST]
+  Parameters: {"blog"=>{"title"=>"t"}, "_"=>""}
+  [4;36;1mBlog Load (0.5ms)[0m   [0;1mSELECT * FROM "blogs" WHERE (LOWER(title) LIKE '%t%') ORDER BY title ASC LIMIT 10[0m
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/blogs/auto_complete_for_blog_title]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:39:22) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PaginationController#index (for 127.0.0.1 at 2010-01-11 16:39:29) [GET]
+  [4;35;1mPaginationItem Load (0.4ms)[0m   [0mSELECT * FROM "pagination_items" WHERE (name like '%%') ORDER BY name LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pagination/index
+Rendered pagination/_pagination_items (1.0ms)
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/pagination]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:39:34) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-11 16:39:55) [GET]
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.3ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/tag_users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:39:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#new (for 127.0.0.1 at 2010-01-11 16:40:04) [GET]
+  [4;36;1mTag Load (0.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendering template within layouts/application
+Rendering tag_users/new
+Completed in 68ms (View: 59, DB: 1) | 200 OK [http://127.0.0.1/tag_users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#create (for 127.0.0.1 at 2010-01-11 16:40:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "tag_user"=>{"interests"=>"laughing", "name"=>"Yves", "skills"=>"joking, running"}}
+  [4;35;1mTag Load (0.8ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Assigning , , 
+  [4;36;1mTagUser Create (0.3ms)[0m   [0;1mINSERT INTO "tag_users" ("name", "created_at", "updated_at", "skills", "tags") VALUES(NULL, '2010-01-12 00:40:17', '2010-01-12 00:40:17', NULL, NULL)[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+Redirected to http://127.0.0.1:3000/tag_users/5
+Completed in 55ms (DB: 1) | 302 Found [http://127.0.0.1/tag_users]
+
+
+Processing TagUsersController#show (for 127.0.0.1 at 2010-01-11 16:40:17) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.1ms)[0m   [0;1mSELECT * FROM "tag_users" WHERE ("tag_users"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering tag_users/show
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/tag_users/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:40:18) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-11 16:40:20) [GET]
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.3ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/tag_users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-11 16:40:32) [GET]
+  Parameters: {"id"=>"running"}
+  [4;35;1mTag Load (0.7ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE 'running') [0m
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;35;1mTagUser Load (0.2ms)[0m   [0mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_running_1013 ON tag_users_taggings_running_1013.taggable_id = tag_users.id AND tag_users_taggings_running_1013.taggable_type = 'TagUser' AND tag_users_taggings_running_1013.tag_id = 6 [0m
+Rendered tag_users/_tag_user (50.3ms)
+Completed in 65ms (View: 56, DB: 1) | 200 OK [http://127.0.0.1/tag_users/tag_users/running]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-11 16:40:35) [GET]
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.3ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/tag_users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#tag_users (for 127.0.0.1 at 2010-01-11 16:40:47) [GET]
+  Parameters: {"id"=>"writing"}
+  [4;36;1mTag Load (0.9ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE 'writing') [0m
+Rendering template within layouts/application
+Rendering tag_users/tag_users
+  [4;36;1mTagUser Load (0.2ms)[0m   [0;1mSELECT "tag_users".* FROM "tag_users" JOIN taggings tag_users_taggings_writing_820 ON tag_users_taggings_writing_820.taggable_id = tag_users.id AND tag_users_taggings_writing_820.taggable_type = 'TagUser' AND tag_users_taggings_writing_820.tag_id = 10 [0m
+Rendered tag_users/_tag_user (1.4ms)
+Rendered tag_users/_tag_user (0.0ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/tag_users/tag_users/writing]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:48:40) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-11 16:49:15) [GET]
+  [4;35;1mTag Load (0.8ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTagUser Load (0.3ms)[0m   [0;1mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'skills'))) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND ((taggings.context = 'interests'))) [0m
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/tag_users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:49:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
