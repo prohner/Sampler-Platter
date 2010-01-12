@@ -8830,3 +8830,17 @@ ActionController::RoutingError (No route matches "/stylesheets/traffic.css" with
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:04:52) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:04:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
