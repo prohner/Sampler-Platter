@@ -7743,3 +7743,16 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mPaginationItem Create (11.3ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('hoe', 10, '2010-01-13 14:00:02', 3, '2010-01-13 14:00:02')[0m
+  [4;35;1mPaginationItem Create (0.3ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('wheelbarrow', 60, '2010-01-13 14:00:02', 2, '2010-01-13 14:00:02')[0m
+  [4;36;1mPaginationItem Create (0.2ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('gherkin', 3, '2010-01-13 14:00:02', 15, '2010-01-13 14:00:02')[0m
+  [4;35;1mPaginationItem Create (0.2ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('batman', 3000, '2010-01-13 14:00:02', 1, '2010-01-13 14:00:02')[0m
+  [4;36;1mPaginationItem Create (0.2ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('fish sausage', 8, '2010-01-13 14:00:02', 2, '2010-01-13 14:00:02')[0m
+  [4;35;1mPaginationItem Create (0.4ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('sauerkraut', 9, '2010-01-13 14:00:02', 9, '2010-01-13 14:00:02')[0m
+  [4;36;1mPaginationItem Create (0.3ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('watering-can', 13, '2010-01-13 14:00:02', 4, '2010-01-13 14:00:02')[0m
+  [4;35;1mPaginationItem Create (0.4ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('dandelions', 1, '2010-01-13 14:00:02', 78, '2010-01-13 14:00:02')[0m
+  [4;36;1mPaginationItem Create (0.3ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('refrigerator', 250, '2010-01-13 14:00:02', 12, '2010-01-13 14:00:02')[0m
+  [4;35;1mPaginationItem Create (0.4ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('flying matches', 145, '2010-01-13 14:00:02', 8, '2010-01-13 14:00:02')[0m
+  [4;36;1mPaginationItem Create (0.3ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('broken accordion', 18, '2010-01-13 14:00:02', 1, '2010-01-13 14:00:02')[0m
+  [4;35;1mPaginationItem Create (0.3ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('savage whisper', 7, '2010-01-13 14:00:02', 5, '2010-01-13 14:00:02')[0m
+  [4;36;1mPaginationItem Create (0.2ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('hysterical snail', 13, '2010-01-13 14:00:02', 8, '2010-01-13 14:00:02')[0m
