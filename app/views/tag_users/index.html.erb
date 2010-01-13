@@ -28,9 +28,16 @@
 </div>
 
 <hr size=1 />
-
-
+<%= link_to 'New tag_user', new_tag_user_path %> <br />
+<br />
+<h2>These don't necessarily work.  Just generating RESTful URLs</h2>
+<%= link_to 'Index', tag_users_path %> <br />
+<%= link_to 'Show tag_user', tag_user_path(1) %> <br />
+<%= link_to 'New tag_user', new_tag_user_path %> <br />
+<%= link_to 'Edit tag_user', edit_tag_user_path(1) %> <br />
+<%= link_to 'Create tag_user', tag_users_path %> <br />
+<%= link_to 'Update tag_user', tag_user_path(1) %> <br />
+<%= link_to 'Destroy tag_user', tag_user_path(1) %> <br />
 
 <br />
-
-<%= link_to 'New tag_user', new_tag_user_path %>
+<%= link_to 'RESTful Rails PDF', 'http://www.b-simple.de/download/restful_rails_en.pdf' %>
