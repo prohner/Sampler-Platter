@@ -1,12 +1,12 @@
 <h1>Sampler Platter</h1>
 
-<ul>
+<% content_tag :ul do -%>
 	<li><%= link_to 'Sortable List', :controller => "grocery_lists", :action => "index"  %></li>
 	<li><%= link_to 'In-place editing', :controller => "in_place_editor", :action => "index" %></li>
 	<li><%= link_to 'Pagination', :controller => "pagination", :action => "index" %></li>
 	<li><%= link_to 'Auto Complete Text Field', :controller => "blogs", :action => "index" %></li>
 	<li><%= link_to 'Tag Clouds', :controller => "tag_users", :action => "index" %></li>
-</ul>
+<% end -%>
 Further ideas:
 <ul>
 	<li>Connect to MS SQL Server (branch sql_server)</li>
@@ -15,8 +15,13 @@ Further ideas:
 	<li>Make use of a calendar</li>
 </ul>
 
+Useful stuff:
+<ul>
+	<li><%= link_to 'First Full Tutorial for Rails 2.0', 'http://www.akitaonrails.com/2007/12/12/rolling-with-rails-2-0-the-first-full-tutorial' %></li>
+</ul>
 
 Done ideas:
 <ul>
 	<li><span class="item_done">Create a sitewide (vs. controller-wide) layout file</span></li>
 </ul>
+
