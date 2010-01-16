@@ -2,7 +2,6 @@ class GoogleMapController < ApplicationController
   ## http://www.developer.com/open/article.php/10930_3757576_1/Adding-Google-Maps-To-Your-Rails-Applications.htm
   
   def index
-
     @map = GMap.new("map")
     icon = GIcon.new(:image => "/images/spinner.gif",
                      :icon_anchor => GPoint.new(7, 7),

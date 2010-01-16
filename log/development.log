@@ -8526,3 +8526,59 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 12:04:01) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 42ms (View: 41, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:04:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-16 12:04:02) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:04:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-16 12:26:07) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:26:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-16 12:26:23) [GET]
+Rendering template within layouts/application
+Rendering google_map/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/google_map]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:26:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
