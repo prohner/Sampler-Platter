@@ -8288,3 +8288,15 @@ Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:46:49) [GE
 Rendering template within layouts/application
 Rendering samples/calendar
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:47:30) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:48:23) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/samples]
