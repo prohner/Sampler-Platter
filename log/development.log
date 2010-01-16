@@ -7756,3 +7756,52 @@ Rendering rescues/layout (not_found)
   [4;36;1mPaginationItem Create (0.3ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('broken accordion', 18, '2010-01-13 14:00:02', 1, '2010-01-13 14:00:02')[0m
   [4;35;1mPaginationItem Create (0.3ms)[0m   [0mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('savage whisper', 7, '2010-01-13 14:00:02', 5, '2010-01-13 14:00:02')[0m
   [4;36;1mPaginationItem Create (0.2ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('hysterical snail', 13, '2010-01-13 14:00:02', 8, '2010-01-13 14:00:02')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 21:49:28) [GET]
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:10: syntax error, unexpected tASSOC, expecting '}'
+      format.atom { :layout => false }
+                              ^):
+  
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 21:49:31) [GET]
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:10: syntax error, unexpected tASSOC, expecting '}'
+      format.atom { :layout => false }
+                              ^):
+  
+
+Rendered rescues/_trace (26.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-15 21:49:59) [GET]
+  [4;36;1mGroceryList Load (0.6ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing GroceryListsController#index to atom (for 127.0.0.1 at 2010-01-15 21:50:02) [GET]
+  [4;35;1mGroceryList Load (0.6ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering grocery_lists/index
+PRINTING LIST
+  PRINTING ITEM New list
+  PRINTING ITEM Second List
+Completed in 39ms (View: 35, DB: 1) | 200 OK [http://localhost/grocery_lists.atom]
+
+
+Processing GroceryListsController#index to atom (for 127.0.0.1 at 2010-01-15 21:50:02) [GET]
+  [4;36;1mGroceryList Load (0.6ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering grocery_lists/index
+PRINTING LIST
+  PRINTING ITEM New list
+  PRINTING ITEM Second List
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/grocery_lists.atom]
