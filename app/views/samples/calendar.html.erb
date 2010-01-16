@@ -2,7 +2,10 @@
 
 <%=
 
-calendar(calendar_options) do |d|
+#calendar(calendar_options) do |d|
+calendar({ :year => @display_date.year, 
+			  :month => @display_date.month, 
+			  :first_day_of_week => 0 }) do |d|
 end
 
 %>
