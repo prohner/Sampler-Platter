@@ -8331,3 +8331,44 @@ Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-15 20:56:44) [
 Rendering template within layouts/application
 Rendering grocery_lists/index
 Completed in 29ms (View: 8, DB: 10) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 21:59:48) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 21:59:57) [GET]
+  Parameters: {"month"=>"1", "year"=>"2009"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2009/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 22:00:16) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:04:11) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:06:36) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:06:48) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
