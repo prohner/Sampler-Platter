@@ -8229,3 +8229,62 @@ Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:41:05) [GE
 Rendering template within layouts/application
 Rendering samples/calendar
 Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2010/3]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:42:56) [GET]
+  Parameters: {"month"=>"2", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2010/2]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:42:57) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:42:58) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:43:00) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:43:02) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:43:27) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:46:40) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:46:42) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:46:49) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
