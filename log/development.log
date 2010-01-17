@@ -8994,3 +8994,90 @@ Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:26:49) [POST]
   Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
 Rendering traffic/find
 Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 17:27:22) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 17:27:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:12:35) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:13:16) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/traffic_controller.rb:23:in `find'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:15:07) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/traffic_controller.rb:24:in `find'
+
+Rendered rescues/_trace (85.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:16:09) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 563ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:18:09) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:18:18) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 249ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:19:06) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 429ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:19:49) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 350ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
