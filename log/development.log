@@ -7759,6 +7759,7 @@ Rendering rescues/layout (not_found)
   [4;36;1mPaginationItem Create (0.2ms)[0m   [0;1mINSERT INTO "pagination_items" ("name", "price", "created_at", "quantity", "updated_at") VALUES('hysterical snail', 13, '2010-01-13 14:00:02', 8, '2010-01-13 14:00:02')[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 21:49:28) [GET]
 
 SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/grocery_lists_controller.rb:10: syntax error, unexpected tASSOC, expecting '}'
@@ -7826,11 +7827,23 @@ Rendering rescues/layout (not_found)
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:09) [GET]
 
 ActionController::RoutingError (No route matches "/google_maps" with {:method=>:get}):
+=======
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-14 22:16:37) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-14 22:17:04) [GET]
+
+ActionController::RoutingError (No route matches "/samples/entries/2010/1" with {:method=>:get}):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:20:41) [GET]
 
 ActionController::RoutingError (No route matches "/google_maps" with {:method=>:get}):
@@ -7884,19 +7897,374 @@ Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/samples]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:29:28) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+=======
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-14 22:17:18) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+
+ActionView::MissingTemplate (Missing template samples/calendar.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-14 22:20:23) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+
+ActionView::TemplateError (undefined method `calendar' for #<ActionView::Base:0x10449a390>) on line #3 of app/views/samples/calendar.html.erb:
+1: <%=
+2: 
+3: calendar do |d|
+4: end
+5: 
+6: %>
+
+    app/views/samples/calendar.html.erb:3
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Thu Jan 14 22:21:28 -0800 2010
+  Status: 500 Internal Server Error
+  /Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected '=', expecting tASSOC
+... :year => prevd.year, :month = > prevd.month),              ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected ')', expecting kEND
+....year, :month = > prevd.month),                             ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected '=', expecting tASSOC
+          :year => nextd.year, :month = > nextd.month),
+                                       ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected ')', expecting kEND
+          :year => nextd.year, :month = > nextd.month),
+                                                      ^
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/Preston Air/work/Sampler-Platter/app/controllers/application_controller.rb:5
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Thu Jan 14 22:21:57 -0800 2010
+  Status: 500 Internal Server Error
+  /Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected '=', expecting tASSOC
+... :year => prevd.year, :month = > prevd.month),              ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected ')', expecting kEND
+....year, :month = > prevd.month),                             ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected '=', expecting tASSOC
+          :year => nextd.year, :month = > nextd.month),
+                                       ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected ')', expecting kEND
+          :year => nextd.year, :month = > nextd.month),
+                                                      ^
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/Preston Air/work/Sampler-Platter/app/controllers/application_controller.rb:5
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Fri Jan 15 20:33:03 -0800 2010
+  Status: 500 Internal Server Error
+  /Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected '=', expecting tASSOC
+... :year => prevd.year, :month = > prevd.month),              ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected ')', expecting kEND
+....year, :month = > prevd.month),                             ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected '=', expecting tASSOC
+          :year => nextd.year, :month = > nextd.month),
+                                       ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected ')', expecting kEND
+          :year => nextd.year, :month = > nextd.month),
+                                                      ^
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/Preston Air/work/Sampler-Platter/app/controllers/application_controller.rb:5
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Fri Jan 15 20:33:49 -0800 2010
+  Status: 500 Internal Server Error
+  /Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected '=', expecting tASSOC
+... :year => prevd.year, :month = > prevd.month),              ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:11: syntax error, unexpected ')', expecting kEND
+....year, :month = > prevd.month),                             ...
+                              ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected '=', expecting tASSOC
+          :year => nextd.year, :month = > nextd.month)
+                                       ^
+/Users/Preston Air/work/Sampler-Platter/app/helpers/samples_helper.rb:14: syntax error, unexpected ')', expecting kEND
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/Preston Air/work/Sampler-Platter/app/controllers/application_controller.rb:5
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing SamplesController#entries (for 127.0.0.1 at 2010-01-15 20:34:19) [GET]
+
+ActionController::UnknownAction (No action responded to entries. Actions: calendar and index):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:29:32) [GET]
 
 ActionController::RoutingError (No route matches "/google_map" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 20:35:03) [GET]
+
+ActionController::RoutingError (No route matches "/entries" with {:method=>:get}):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:30:03) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -7906,11 +8274,17 @@ Completed in 10ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/google_map]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:30:03) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 20:35:25) [GET]
+
+ActionController::RoutingError (No route matches "/entries" with {:method=>:get}):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:32:15) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -7920,11 +8294,17 @@ Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/google_map]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:32:15) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 20:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/entries/" with {:method=>:get}):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:34:19) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -7934,11 +8314,17 @@ Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/google_map]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:34:19) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-15 20:35:55) [GET]
+
+ActionController::RoutingError (No route matches "/entries/" with {:method=>:get}):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-11 16:34:44) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -7948,11 +8334,17 @@ Completed in 63ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/google_map]
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 16:34:44) [GET]
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+=======
+Processing SamplesController#entries (for 127.0.0.1 at 2010-01-15 20:36:04) [GET]
+
+ActionController::UnknownAction (No action responded to entries. Actions: calendar and index):
+>>>>>>> calendar
   
 
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 16:38:06) [GET]
 Rendering template within layouts/application
 Rendering samples/index
@@ -8679,6 +9071,299 @@ Function body:           def _run_erb_app47views47traffic47index46html46erb(loca
             self.output_buffer = old_output_buffer
           end
 Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25:in `compile!'
+=======
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:36:38) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+
+ActionView::TemplateError (undefined method `calendar' for #<ActionView::Base:0x1044c6328>) on line #3 of app/views/samples/calendar.html.erb:
+1: <%=
+2: 
+3: calendar(calendar_options) do |d|
+4: end
+5: 
+6: %>
+
+    app/views/samples/calendar.html.erb:3
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:39:24) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+
+ActionView::TemplateError (undefined method `calendar' for #<ActionView::Base:0x10414de30>) on line #3 of app/views/samples/calendar.html.erb:
+1: <%=
+2: 
+3: calendar(calendar_options) do |d|
+4: end
+5: 
+6: %>
+
+    app/views/samples/calendar.html.erb:3
+
+Rendered rescues/_trace (91.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:39:33) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 65ms (View: 64, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:40:32) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:41:04) [GET]
+  Parameters: {"month"=>"2", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2010/2]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:41:05) [GET]
+  Parameters: {"month"=>"3", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2010/3]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:42:56) [GET]
+  Parameters: {"month"=>"2", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2010/2]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:42:57) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:42:58) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:43:00) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:43:02) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:43:27) [GET]
+  Parameters: {"month"=>"1", "year"=>"2010"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/samples/entries/2010/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:46:40) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:46:42) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 20:46:49) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:47:30) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:48:23) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing TagUsersController#index (for 127.0.0.1 at 2010-01-15 20:56:31) [GET]
+  [4;36;1mTag Load (2.7ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'skills' INNER JOIN tag_users ON tag_users.id = taggings.taggable_id WHERE (taggings.taggable_type = 'TagUser') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTagUser Load (0.3ms)[0m   [0mSELECT * FROM "tag_users" [0m
+Rendering template within layouts/application
+Rendering tag_users/index
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 4) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'skills')) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'TagUser') AND (taggings.context = 'interests')) [0m
+Completed in 134ms (View: 99, DB: 5) | 200 OK [http://localhost/tag_users]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 20:56:41) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-15 20:56:44) [GET]
+  [4;36;1mGroceryList Load (10.1ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 29ms (View: 8, DB: 10) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 21:59:48) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 21:59:57) [GET]
+  Parameters: {"month"=>"1", "year"=>"2009"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2009/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 22:00:16) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:04:11) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:06:36) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:06:48) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 22:07:39) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:09:35) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+
+ActionView::TemplateError (No year given) on line #5 of app/views/samples/calendar.html.erb:
+2: 
+3: <%=
+4: 
+5: calendar( { :first_day_of_week => 1 } ) do |d|
+6: end
+7: 
+8: %>
+
+    app/views/samples/calendar.html.erb:5
+
+Rendered rescues/_trace (85.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:09:57) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+
+ActionView::TemplateError (No year given) on line #5 of app/views/samples/calendar.html.erb:
+2: 
+3: <%=
+4: 
+5: calendar do |d|
+6: end
+7: 
+8: %>
+
+    app/views/samples/calendar.html.erb:5
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:12:13) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:13:44) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+ERROR: compiling _run_erb_app47views47samples47calendar46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => { 'D','L','M','X','J','V','S' } }) do |d|
+			                                               ^
+Function body:           def _run_erb_app47views47samples47calendar46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( stylesheet_link_tag 'calendar/red/style' ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((
+
+#calendar(calendar_options) do |d|
+calendar({ :year => @display_date.year, 
+			  :month => @display_date.month, 
+			  :first_day_of_week => 0,
+			  :abbrev => 3,
+			  :day_names => { 'D','L','M','X','J','V','S' } }) do |d|
+end
+
+).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:16:in `compile!'
 /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
 /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
 /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
@@ -8754,6 +9439,246 @@ Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.
 script/server:3
 
 ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => { 'D','L','M','X','J','V','S' } }) do |d|
+			                                               ^) on line #10 of app/views/samples/calendar.html.erb:
+7: 			  :month => @display_date.month, 
+8: 			  :first_day_of_week => 0,
+9: 			  :abbrev => 3,
+10: 			  :day_names => { 'D','L','M','X','J','V','S' } }) do |d|
+11: end
+12: 
+13: %>
+
+    app/views/samples/calendar.html.erb:16:in `compile!'
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:14:15) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+ERROR: compiling _run_erb_app47views47samples47calendar46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+			                                               ^
+Function body:           def _run_erb_app47views47samples47calendar46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( stylesheet_link_tag 'calendar/red/style' ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((
+
+#calendar(calendar_options) do |d|
+calendar(  :year => @display_date.year, 
+			  :month => @display_date.month, 
+			  :first_day_of_week => 0,
+			  :abbrev => 3,
+			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+end
+
+).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:16:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+			                                               ^) on line #10 of app/views/samples/calendar.html.erb:
+7: 			  :month => @display_date.month, 
+8: 			  :first_day_of_week => 0,
+9: 			  :abbrev => 3,
+10: 			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+11: end
+12: 
+13: %>
+
+    app/views/samples/calendar.html.erb:16:in `compile!'
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:19:40) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+ERROR: compiling _run_erb_app47views47samples47calendar46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+			                                               ^
+Function body:           def _run_erb_app47views47samples47calendar46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( stylesheet_link_tag 'calendar/red/style' ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((
+
+#calendar(calendar_options) do |d|
+calendar(  :year => @display_date.year, 
+			  :month => @display_date.month, 
+			  :first_day_of_week => 0,
+			  :abbrev => 3,
+			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+end
+
+).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:16:in `compile!'
+>>>>>>> calendar
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+<<<<<<< HEAD
 /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:17: syntax error, unexpected kEND
 ; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n    "
                              ^) on line #17 of app/views/traffic/index.html.erb:
@@ -8806,6 +9731,52 @@ Function body:           def _run_erb_app47views47traffic47index46html46erb(loca
             self.output_buffer = old_output_buffer
           end
 Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25:in `compile!'
+=======
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+			                                               ^) on line #10 of app/views/samples/calendar.html.erb:
+7: 			  :month => @display_date.month, 
+8: 			  :first_day_of_week => 0,
+9: 			  :abbrev => 3,
+10: 			  :day_names => { 'D','L','M','X','J','V','S' } ) do |d|
+11: end
+12: 
+13: %>
+
+    app/views/samples/calendar.html.erb:16:in `compile!'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:20:04) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+ERROR: compiling _run_erb_app47views47samples47calendar46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => {'D','L','M','X','J','V','S'} }) do |d|
+			                                             ^
+Function body:           def _run_erb_app47views47samples47calendar46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( stylesheet_link_tag 'calendar/red/style' ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer.concat((
+
+#calendar(calendar_options) do |d|
+calendar({ :year => @display_date.year, 
+			  :month => @display_date.month, 
+			  :first_day_of_week => 0,
+			  :abbrev => 3,
+			  :day_names => {'D','L','M','X','J','V','S'} }) do |d|
+end
+
+).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:16:in `compile!'
+>>>>>>> calendar
 /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
 /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
 /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
@@ -8881,6 +9852,7 @@ Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.
 script/server:3
 
 ActionView::TemplateError (compile error
+<<<<<<< HEAD
 /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25: syntax error, unexpected kENSURE, expecting $end) on line #25 of app/views/traffic/index.html.erb:
 22:   </div>
 23:   </body>
@@ -9146,10 +10118,27 @@ The error occurred while evaluating nil.[]):
   app/controllers/traffic_controller.rb:24:in `find'
 
 Rendered rescues/_trace (85.3ms)
+=======
+/Users/Preston Air/work/Sampler-Platter/app/views/samples/calendar.html.erb:10: odd number list for Hash
+			  :day_names => {'D','L','M','X','J','V','S'} }) do |d|
+			                                             ^) on line #10 of app/views/samples/calendar.html.erb:
+7: 			  :month => @display_date.month, 
+8: 			  :first_day_of_week => 0,
+9: 			  :abbrev => 3,
+10: 			  :day_names => {'D','L','M','X','J','V','S'} }) do |d|
+11: end
+12: 
+13: %>
+
+    app/views/samples/calendar.html.erb:16:in `compile!'
+
+Rendered rescues/_trace (30.2ms)
+>>>>>>> calendar
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
 
 
+<<<<<<< HEAD
 Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:16:09) [POST]
   Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
 In the find method
@@ -9424,3 +10413,37 @@ Address is (1 Wilshire Blvd, Los Angeles, CA)
 Rendering traffic/find
 Completed in 773ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
 >>>>>>> gmaps_traffic
+=======
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:20:45) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:20:59) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:21:01) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-15 22:21:09) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-15 22:22:57) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+>>>>>>> calendar

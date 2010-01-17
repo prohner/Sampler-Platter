@@ -8,13 +8,14 @@
 	<li><%= link_to 'Tag Clouds', :controller => "tag_users", :action => "index" %></li>
 	<li><%= link_to 'Google Maps', :controller => "google_map", :action => "index" %></li>
 	<li><%= link_to 'Google/Yahoo Mashup', :controller => "traffic", :action => "index" %></li>
+	<li><%= link_to 'Calendar', :controller => "samples", :action => "calendar", :year => '2008', :month => '12' %></li>
 <% end -%>
 Further ideas:
 <ul>
 	<li>Connect to MS SQL Server (branch sql_server)</li>
 	<li>Do a complete set of testing</li>
 	<li>Expose some API for iPhone</li>
-	<li>Make use of a calendar</li>
+	<li>Generate XML/JSON, perhaps for iPhone</li>
 </ul>
 
 Useful stuff:
@@ -24,6 +25,8 @@ Useful stuff:
 
 Done ideas:
 <ul>
+	<li><span class="item_done">Make use of a calendar</span></li>
+	<li><span class="item_done">Check out RESTful features (going into Tag Clouds)</span></li>
 	<li><span class="item_done">Create a sitewide (vs. controller-wide) layout file</span></li>
 	<li><span class="item_done">Added ATOM feed to "Sortable List"</span></li>
 	<li><span class="item_done">Check out RESTful features (going into Tag Clouds)</span></li>

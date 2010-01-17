@@ -49,6 +49,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   
+  map.connect 'samples/entries/:year/:month', :controller => 'samples', :action => 'calendar'
   
   map.auto_complete ':controller/:action', 
                     :requirements => { :action => /auto_complete_for_\S+/ }, 
