@@ -8592,6 +8592,7 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 12:04:01) [GET]
 Rendering template within layouts/application
 Rendering samples/index
@@ -8599,6 +8600,15 @@ Completed in 42ms (View: 41, DB: 0) | 200 OK [http://localhost/samples]
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:04:01) [GET]
+=======
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-11 21:59:57) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 24ms (View: 23, DB: 0) | 200 OK [http://127.0.0.1/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 21:59:57) [GET]
+>>>>>>> gmaps_traffic
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
   
@@ -8606,6 +8616,7 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-16 12:04:02) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -8613,6 +8624,283 @@ Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/google_map]
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:04:03) [GET]
+=======
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 21:59:59) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+
+ActionView::TemplateError (undefined local variable or method `end_form_tag' for #<ActionView::Base:0x1044d5a58>) on line #17 of app/views/traffic/index.html.erb:
+14: 	<%= text_field_tag "address" %>
+15: 	<%= submit_tag "Find" %>
+16:       </div>
+17:     <%= end_form_tag %>
+18:     <%= @map.div %>
+19:     <div id="notice" style="display:none;"></div>
+20:   </div>
+
+    app/views/traffic/index.html.erb:17
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:00:26) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+ERROR: compiling _run_erb_app47views47traffic47index46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:17: syntax error, unexpected kEND
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n    "
+                             ^
+Function body:           def _run_erb_app47views47traffic47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n<head>\n  <title>Google Maps / Yahoo! Traffic Mashup</title>\n  "
+
+
+; @output_buffer.concat(( javascript_include_tag :defaults ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( stylesheet_link_tag "traffic" ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( GMap.header(:with_vml => false) ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( @map.to_html ).to_s); @output_buffer.concat "\n</head>\n<body>\n  <div id=\"main\">\n    "
+
+
+
+; @output_buffer.concat(( form_remote_tag(:url => {:action => :find}) ).to_s); @output_buffer.concat "\n      <div id=\"form\" >\n\t<label for=\"address\">Address:</label>\n\t"
+
+
+; @output_buffer.concat(( text_field_tag "address" ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( submit_tag "Find" ).to_s); @output_buffer.concat "\n      </div>\n    "
+
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( @map.div ).to_s); @output_buffer.concat "\n    <div id=\"notice\" style=\"display:none;\"></div>\n  </div>\n  </body>\n</html>"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:17: syntax error, unexpected kEND
+; @output_buffer.concat(( end ).to_s); @output_buffer.concat "\n    "
+                             ^) on line #17 of app/views/traffic/index.html.erb:
+14: 	<%= text_field_tag "address" %>
+15: 	<%= submit_tag "Find" %>
+16:       </div>
+17:     <%= end %>
+18:     <%= @map.div %>
+19:     <div id="notice" style="display:none;"></div>
+20:   </div>
+
+    app/views/traffic/index.html.erb:25:in `compile!'
+
+Rendered rescues/_trace (93.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:01:59) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+ERROR: compiling _run_erb_app47views47traffic47index46html46erb RAISED compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47traffic47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n<head>\n  <title>Google Maps / Yahoo! Traffic Mashup</title>\n  "
+
+
+; @output_buffer.concat(( javascript_include_tag :defaults ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( stylesheet_link_tag "traffic" ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( GMap.header(:with_vml => false) ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( @map.to_html ).to_s); @output_buffer.concat "\n</head>\n<body>\n  <div id=\"main\">\n    "
+
+
+
+;  form_remote_tag(:url => {:action => :find}) ; @output_buffer.concat "\n      <div id=\"form\" >\n\t\t\t<label for=\"address\">Address:</label>\n\t\t\t"
+
+
+; @output_buffer.concat(( text_field_tag "address" ).to_s); @output_buffer.concat "\n\t\t\t"
+; @output_buffer.concat(( submit_tag "Find" ).to_s); @output_buffer.concat "\n      </div>\n    "
+
+;  end ; @output_buffer.concat "\n\n    "
+
+; @output_buffer.concat(( @map.div ).to_s); @output_buffer.concat "\n\n    <div id=\"notice\" style=\"display:none;\"></div>\n  </div>\n  </body>\n</html>"
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Preston Air/work/Sampler-Platter/app/views/traffic/index.html.erb:25: syntax error, unexpected kENSURE, expecting $end) on line #25 of app/views/traffic/index.html.erb:
+22:   </div>
+23:   </body>
+24: </html>
+
+    app/views/traffic/index.html.erb:25:in `compile!'
+
+Rendered rescues/_trace (30.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:02:35) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:02:35) [GET]
+>>>>>>> gmaps_traffic
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
   
@@ -8620,6 +8908,7 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-16 12:26:07) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -8627,6 +8916,23 @@ Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/google_map]
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:26:07) [GET]
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:02:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/traffic.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:04:52) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:04:52) [GET]
+>>>>>>> gmaps_traffic
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
   
@@ -8634,6 +8940,7 @@ ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.c
 Rendering rescues/layout (not_found)
 
 
+<<<<<<< HEAD
 Processing GoogleMapController#index (for 127.0.0.1 at 2010-01-16 12:26:23) [GET]
 Rendering template within layouts/application
 Rendering google_map/index
@@ -8641,9 +8948,479 @@ Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/google_map]
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 12:26:23) [GET]
+=======
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:12:12) [GET]
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/traffic_controller.rb:37: syntax error, unexpected '-', expecting '\n' or ';'
+  def bounding_box-center(markers)
+                   ^
+/Users/Preston Air/work/Sampler-Platter/app/controllers/traffic_controller.rb:54: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-11 22:12:21) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 22:12:21) [GET]
+>>>>>>> gmaps_traffic
 
 ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
   
 
 Rendering rescues/layout (not_found)
+<<<<<<< HEAD
 >>>>>>> gmaps
+=======
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:12:35) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+
+ActionView::MissingTemplate (Missing template traffic/find.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:15:13) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 58ms (View: 57, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:15:31) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:16:55) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:17:17) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:21:09) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:27:30) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:28:05) [POST]
+  Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
+Rendering traffic/find
+Completed in 826ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 13:20:47) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 35ms (View: 34, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 13:20:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 13:20:48) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 13:20:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 13:20:51) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 13:20:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:21:04) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 570ms (View: 3, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:22:45) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:24:36) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:25:16) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:26:49) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 17:27:22) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 17:27:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:12:35) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:13:16) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/traffic_controller.rb:23:in `find'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:15:07) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/traffic_controller.rb:24:in `find'
+
+Rendered rescues/_trace (85.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:16:09) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 563ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:18:09) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:18:18) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 249ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:19:06) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 429ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:19:49) [POST]
+  Parameters: {"address"=>"asdf", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (asdf)
+Rendering traffic/find
+Completed in 350ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:31:47) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., 91377)
+Rendering traffic/find
+Completed in 754ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:32:02) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 349ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 19:32:36) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 100ms (View: 99, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 19:32:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 19:32:39) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 19:32:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#find (for 127.0.0.1 at 2010-01-16 19:32:52) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/traffic_controller.rb:27: syntax error, unexpected tSYMBEG, expecting ')'
+                             :include_map => true)
+                              ^):
+  
+
+Rendered rescues/_trace (78.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:33:13) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 301ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:10) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 802ms (View: 51, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:33) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 761ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:45) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 280ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:40:52) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:40:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:56) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 281ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:41:56) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 74ms (View: 72, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:41:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:41:59) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 296ms (View: 12, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:43:52) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 519ms (View: 54, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:44:48) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 553ms (View: 45, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 21:44:53) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 39ms (View: 38, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:44:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:44:55) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:44:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:45:00) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 514ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:45:43) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:46:56) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:46:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:48:17) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:48:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:48:41) [POST]
+  Parameters: {"address"=>"1 Wilshire Blvd, Los Angeles, CA", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (1 Wilshire Blvd, Los Angeles, CA)
+Rendering traffic/find
+Completed in 773ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+>>>>>>> gmaps_traffic

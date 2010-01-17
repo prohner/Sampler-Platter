@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Google Maps / Yahoo! Traffic Mashup</title>
+  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "traffic" %>
+  <%= GMap.header(:with_vml => false) %>
+  <%= @map.to_html %>
+</head>
+<body>
+  <div id="main">
+    <% form_remote_tag :url => { :action => :find } do %>
+      <div id="form" >
+			<label for="address">Address:</label>
+			<%= text_field_tag "address", "1 Wilshire Blvd, Los Angeles, CA", :size => 45 %>
+			<%= submit_tag "Find" %>
+      </div>
+    <% end %>
+
+    <%= @map.div %>
+
+    <div id="notice" style="display:none;"></div>
+  </div>
+  </body>
+</html>
