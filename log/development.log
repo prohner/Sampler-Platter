@@ -8922,3 +8922,75 @@ Processing TrafficController#find (for 127.0.0.1 at 2010-01-11 22:28:05) [POST]
   Parameters: {"address"=>"New York, NY", "commit"=>"Find", "authenticity_token"=>"apRZWNtJdpKP7bLx4Jh9/AUzaWVT0pGPFhT1LJlaxHA=", "_"=>""}
 Rendering traffic/find
 Completed in 826ms (View: 1, DB: 0) | 200 OK [http://127.0.0.1/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 13:20:47) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 35ms (View: 34, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 13:20:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 13:20:48) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 13:20:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 13:20:51) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 13:20:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:21:04) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 570ms (View: 3, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:22:45) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:24:36) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:25:16) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 13:26:49) [POST]
+  Parameters: {"address"=>"6200 canoga, 91367", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+Rendering traffic/find
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]

@@ -21,12 +21,14 @@ class TrafficController < ApplicationController
 
   def find
     begin
-      #results = Traffic::get(:location => @params[:address])
-      results = Traffic.get(:street => "1 Infinite Loop",
-                             :city => "Cupertino",
-                             :state => "CA",
-                             :zip => "95014",
+      logger.error("Address is (%s)" % @params[:address])
+      results = Traffic::get(:location => @params[:address],
                              :include_map => true)
+      #results = Traffic.get(:street => "1 Infinite Loop",
+      #                      :city => "Cupertino",
+      #                      :state => "CA",
+      #                      :zip => "95014",
+      #                      :include_map => true)
       unless results.empty?
         @map = Variable.new("map")
         icon_incident = Variable.new("icon_incident")
@@ -39,7 +41,7 @@ class TrafficController < ApplicationController
         end
         @center = GLatLng.new(bounding_box_center(@traffic_markers))
       else
-        @message = "No traffic informatin found for #{@params[:address]}"
+        @message = "No traffic information found for #{@params[:address]}"
       end
     rescue Exception => exception
       @message = "Service temporarily unavailable. (%s)" % exception.message
