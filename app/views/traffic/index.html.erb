@@ -11,7 +11,7 @@
     <% form_remote_tag :url => { :action => :find } do %>
       <div id="form" >
 			<label for="address">Address:</label>
-			<%= text_field_tag "address" %>
+			<%= text_field_tag "address", "1 Wilshire Blvd, Los Angeles, CA", :size => 45 %>
 			<%= submit_tag "Find" %>
       </div>
     <% end %>

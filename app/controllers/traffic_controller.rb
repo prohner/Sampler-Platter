@@ -23,13 +23,13 @@ class TrafficController < ApplicationController
     logger.error("In the find method")
     logger.error("Address is (%s)" % params[:address])
     begin
-      #results = Traffic::get(:location => params[:address],
-      #                       :include_map => true)
-      results = Traffic.get(:street => "6200 Canoga Ave",
-                            :city => "Woodland Hills",
-                            :state => "CA",
-                            :zip => "91367",
-                            :include_map => true)
+      results = Traffic::get(:location => params[:address],
+                             :include_map => true)
+      #results = Traffic.get(:street => "1 Wilshire Blvd",
+      #                      :city => "Los Angeles",
+      #                      :state => "CA",
+      #                      :zip => "",
+      #                      :include_map => true)
       unless results.empty?
         @map = Variable.new("map")
         icon_incident = Variable.new("icon_incident")

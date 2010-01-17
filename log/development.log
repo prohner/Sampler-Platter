@@ -9081,3 +9081,238 @@ In the find method
 Address is (asdf)
 Rendering traffic/find
 Completed in 350ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:31:47) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., 91377)
+Rendering traffic/find
+Completed in 754ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:32:02) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 349ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 19:32:36) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 100ms (View: 99, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 19:32:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 19:32:39) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 19:32:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#find (for 127.0.0.1 at 2010-01-16 19:32:52) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+
+SyntaxError (/Users/Preston Air/work/Sampler-Platter/app/controllers/traffic_controller.rb:27: syntax error, unexpected tSYMBEG, expecting ')'
+                             :include_map => true)
+                              ^):
+  
+
+Rendered rescues/_trace (78.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 19:33:13) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 301ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:10) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 802ms (View: 51, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:33) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 761ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:45) [POST]
+  Parameters: {"address"=>"253 St. Croix Ct., Oak Park, CA 91377", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (253 St. Croix Ct., Oak Park, CA 91377)
+Rendering traffic/find
+Completed in 280ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:40:52) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:40:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:40:56) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 281ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:41:56) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 74ms (View: 72, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:41:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:41:59) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 296ms (View: 12, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:43:52) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 519ms (View: 54, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:44:48) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 553ms (View: 45, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-16 21:44:53) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 39ms (View: 38, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:44:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:44:55) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:44:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:45:00) [POST]
+  Parameters: {"address"=>"", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is ()
+Rendering traffic/find
+Completed in 514ms (View: 2, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:45:43) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:46:56) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:46:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-16 21:48:17) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-16 21:48:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/sampler_platter.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-16 21:48:41) [POST]
+  Parameters: {"address"=>"1 Wilshire Blvd, Los Angeles, CA", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (1 Wilshire Blvd, Los Angeles, CA)
+Rendering traffic/find
+Completed in 773ms (View: 1, DB: 0) | 200 OK [http://localhost/traffic/find]
