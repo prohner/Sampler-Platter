@@ -8,6 +8,7 @@ class GroceryListsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @grocery_lists }
       format.atom { render :layout => false }
+      format.json { render :json => @grocery_lists }
     end
   end
 

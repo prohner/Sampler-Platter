@@ -10447,3 +10447,168 @@ Rendering template within layouts/application
 Rendering samples/index
 Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
 >>>>>>> calendar
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-17 05:41:31) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 312ms (View: 311, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing SamplesController#calendar (for 127.0.0.1 at 2010-01-17 05:41:34) [GET]
+  Parameters: {"month"=>"12", "year"=>"2008"}
+Rendering template within layouts/application
+Rendering samples/calendar
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/samples/entries/2008/12]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-17 05:41:39) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-18 22:11:00) [GET]
+  [4;36;1mGroceryList Load (77.4ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 682ms (View: 383, DB: 77) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing GroceryListsController#index to atom (for 127.0.0.1 at 2010-01-18 22:11:05) [GET]
+  [4;35;1mGroceryList Load (0.6ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering grocery_lists/index
+PRINTING LIST
+  PRINTING ITEM New list
+  PRINTING ITEM Second List
+Completed in 1682ms (View: 1660, DB: 1) | 200 OK [http://localhost/grocery_lists.atom]
+
+
+Processing GroceryListsController#index to atom (for 127.0.0.1 at 2010-01-18 22:11:08) [GET]
+  [4;36;1mGroceryList Load (0.5ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering grocery_lists/index
+PRINTING LIST
+  PRINTING ITEM New list
+  PRINTING ITEM Second List
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/grocery_lists.atom]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-18 22:11:14) [GET]
+  [4;35;1mGroceryList Load (0.5ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-18 22:11:16) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-18 22:21:40) [GET]
+  [4;36;1mInPlaceEditor Load (0.6ms)[0m   [0;1mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/application
+Rendering in_place_editor/index
+Completed in 36ms (View: 17, DB: 1) | 200 OK [http://localhost/in_place_editor]
+
+
+Processing InPlaceEditorController#new (for 127.0.0.1 at 2010-01-18 22:21:44) [GET]
+Rendering template within layouts/application
+Rendering in_place_editor/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/in_place_editor/new]
+
+
+Processing InPlaceEditorController#index (for 127.0.0.1 at 2010-01-18 22:21:49) [GET]
+  [4;35;1mInPlaceEditor Load (0.6ms)[0m   [0mSELECT * FROM "in_place_editors" [0m
+Rendering template within layouts/application
+Rendering in_place_editor/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/in_place_editor]
+
+
+Processing InPlaceEditorController#show (for 127.0.0.1 at 2010-01-18 22:21:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInPlaceEditor Load (0.1ms)[0m   [0;1mSELECT * FROM "in_place_editors" WHERE ("in_place_editors"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering in_place_editor/show
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/in_place_editor/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-18 22:21:54) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing TrafficController#index (for 127.0.0.1 at 2010-01-18 22:22:12) [GET]
+Rendering template within layouts/application
+Rendering traffic/index
+Completed in 32ms (View: 31, DB: 0) | 200 OK [http://localhost/traffic]
+
+
+Processing TrafficController#find (for 127.0.0.1 at 2010-01-18 22:22:15) [POST]
+  Parameters: {"address"=>"1 Wilshire Blvd, Los Angeles, CA", "commit"=>"Find", "authenticity_token"=>"9YPIPe3gEUrQ3X6Xp9QgIS69hA13L7wDJ+EbouycP58=", "_"=>""}
+In the find method
+Address is (1 Wilshire Blvd, Los Angeles, CA)
+Rendering traffic/find
+Completed in 1195ms (View: 15, DB: 0) | 200 OK [http://localhost/traffic/find]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-18 22:23:39) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-18 22:24:12) [GET]
+  [4;35;1mGroceryList Load (0.5ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing GroceryListsController#index to json (for 127.0.0.1 at 2010-01-18 22:24:52) [GET]
+  [4;36;1mGroceryList Load (0.5ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+
+ActionView::MissingTemplate (Missing template grocery_lists/index.erb in view path app/views):
+  app/controllers/grocery_lists_controller.rb:11:in `index'
+  app/controllers/grocery_lists_controller.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroceryListsController#index to json (for 127.0.0.1 at 2010-01-18 22:27:45) [GET]
+  [4;35;1mGroceryList Load (0.5ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/grocery_lists.json]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-18 22:28:49) [GET]
+  [4;36;1mGroceryList Load (0.5ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-18 22:29:19) [GET]
+  [4;35;1mGroceryList Load (0.6ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing GroceryListsController#index to xml (for 127.0.0.1 at 2010-01-18 22:29:22) [GET]
+  [4;36;1mGroceryList Load (0.5ms)[0m   [0;1mSELECT * FROM "grocery_lists" [0m
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/grocery_lists.xml]
+
+
+Processing GroceryListsController#index (for 127.0.0.1 at 2010-01-18 22:29:25) [GET]
+  [4;35;1mGroceryList Load (0.5ms)[0m   [0mSELECT * FROM "grocery_lists" [0m
+Rendering template within layouts/application
+Rendering grocery_lists/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/grocery_lists]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-18 22:29:27) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/samples]
