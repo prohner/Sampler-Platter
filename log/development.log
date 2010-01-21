@@ -10762,3 +10762,9 @@ Processing GroceryListsController#sort (for 127.0.0.1 at 2010-01-20 16:24:59) [P
   [4;36;1mFoodItem Update (0.2ms)[0m   [0;1mUPDATE "food_items" SET "updated_at" = '2010-01-21 00:24:59', "position" = 5 WHERE "id" = 6[0m
   [4;35;1mFoodItem Update (0.3ms)[0m   [0mUPDATE "food_items" SET "updated_at" = '2010-01-21 00:24:59', "position" = 6 WHERE "id" = 4[0m
 Completed in 116ms (View: 1, DB: 2) | 200 OK [http://127.0.0.1/grocery_lists/sort/1]
+
+
+Processing SamplesController#index (for 127.0.0.1 at 2010-01-20 16:27:02) [GET]
+Rendering template within layouts/application
+Rendering samples/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://127.0.0.1/samples]
