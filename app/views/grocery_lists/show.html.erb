@@ -7,6 +7,16 @@
 li .handle { color: #777; cursor: move; font-size: 12px; }￼  
 </style>
 
+Simple sortable_element
+<ul id="my_list_simple" style="">
+	<% @grocery_list.food_items.each do |food_item| %>
+		<% content_tag_for :li, food_item, :style => "cursor: move;" do %>
+			<%= h food_item.name %>
+		<% end %>
+	<% end %>
+</ul>
+
+Features sortable_element
 <ul id="my_list" style="">
 	<% @grocery_list.food_items.each do |food_item| %>
 		<% content_tag_for :li, food_item do %>
@@ -16,10 +26,16 @@ li .handle { color: #777; cursor: move; font-size: 12px; }￼
 	<% end %>
 </ul>
 
+<%= sortable_element "my_list_simple",
+							:url => {:action => "sort", :id => @grocery_list},
+							:complete => visual_effect(:highlight, "my_list_simple")
+%>
+
 <%= sortable_element "my_list",
 							:url => {:action => "sort", :id => @grocery_list},
 							:complete => visual_effect(:highlight, "my_list"),
-							:handle => 'handle'
+							:handle => 'handle',
+							:ghosting => true
 %>
 
 
