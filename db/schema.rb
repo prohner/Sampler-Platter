@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100110042548) do
+ActiveRecord::Schema.define(:version => 20100123070914) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(:version => 20100110042548) do
     t.string   "name",       :limit => 30
     t.integer  "quantity",                 :default => 0, :null => false
     t.integer  "price",                    :default => 0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parallel_list_items", :force => true do |t|
+    t.string   "name"
+    t.boolean  "is_selected"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

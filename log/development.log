@@ -1,1 +1,43 @@
-# Logfile created on Fri Jan 22 22:41:30 -0800 2010
+# Logfile created on Fri Jan 22 22:41:30 -0800 2010  [4;36;1mSQL (11.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroceryLists (20100105054931)
+Migrating to CreateFoodItems (20100105055023)
+Migrating to CreateInPlaceEditors (20100106033756)
+Migrating to AddInPlaceEditorData (20100106035440)
+Migrating to CreatePaginationItems (20100106141028)
+Migrating to AddPaginationItems (20100106160032)
+Migrating to CreateBlogs (20100106222705)
+Migrating to ActsAsTaggableOnMigration (20100110041737)
+Migrating to CreateTagUsers (20100110042216)
+Migrating to AddTagUsers (20100110042548)
+Migrating to CreateParallelListItems (20100123070914)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "parallel_list_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "is_selected" boolean, "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mParallelListItem Create (0.6ms)[0m   [0;1mINSERT INTO "parallel_list_items" ("name", "position", "created_at", "updated_at", "is_selected") VALUES('Preston', 1, '2010-01-23 07:26:15', '2010-01-23 07:26:15', 't')[0m
+  [4;35;1mParallelListItem Create (0.1ms)[0m   [0mINSERT INTO "parallel_list_items" ("name", "position", "created_at", "updated_at", "is_selected") VALUES('Tom', 2, '2010-01-23 07:26:15', '2010-01-23 07:26:15', 't')[0m
+  [4;36;1mParallelListItem Create (1.6ms)[0m   [0;1mINSERT INTO "parallel_list_items" ("name", "position", "created_at", "updated_at", "is_selected") VALUES('Aaron', 3, '2010-01-23 07:26:15', '2010-01-23 07:26:15', 'f')[0m
+  [4;35;1mParallelListItem Create (0.1ms)[0m   [0mINSERT INTO "parallel_list_items" ("name", "position", "created_at", "updated_at", "is_selected") VALUES('Ihor', 4, '2010-01-23 07:26:15', '2010-01-23 07:26:15', 'f')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100123070914')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("blogs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("food_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("grocery_lists")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("in_place_editors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pagination_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("parallel_list_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tag_users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("taggings")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type_and_context')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tags")[0m
